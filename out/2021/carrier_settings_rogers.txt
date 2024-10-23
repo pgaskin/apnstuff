@@ -1,0 +1,170 @@
+1: {"rogers_ca"}              # canonical_name
+2: 30000000051                # version
+3: {                          # apns
+  2: {                        # apn
+    1: {"Rogers Tethering"}   # name
+    2: {"ltedata.apn"}        # value
+    3: 4                      # type, DUN
+    14: 2                     # protocol, IPV4V6
+    15: 2                     # roaming_protocol, IPV4V6
+    24: false                 # user_editable
+  }
+  2: {          # apn
+    1: {"IMS"}  # name
+    2: {"ims"}  # value
+    3: 7        # type, IMS
+    14: 2       # protocol, IPV4V6
+    15: 2       # roaming_protocol, IPV4V6
+    23: false   # user_visible
+  }
+  2: {                                                # apn
+    1: {"Rogers Internet"}                            # name
+    2: {"ltemobile.apn"}                              # value
+    3: 1                                              # type, DEFAULT
+    3: 3                                              # type, SUPL
+    3: 5                                              # type, HIPRI
+    3: 9                                              # type, IA
+    3: 2                                              # type, MMS
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    11: {"http://mms.gprs.rogers.com"}                # mmsc
+    12: {"mmsproxy.rogers.com"}                       # mmsc_proxy
+    13: {"80"}                                        # mmsc_proxy_port
+    14: 2                                             # protocol, IPV4V6
+    15: 2                                             # roaming_protocol, IPV4V6
+    24: false                                         # user_editable
+  }
+  2: {                                  # apn
+    1: {"Netsvcs"}                      # name
+    2: {"netsvcs"}                      # value
+    3: 2                                # type, MMS
+    3: 11                               # type, XCAP
+    4: {"18"}                           # bearer_bitmask
+    11: {"http://mms.gprs.rogers.com"}  # mmsc
+    12: {"mmsproxy.rogers.com"}         # mmsc_proxy
+    13: {"80"}                          # mmsc_proxy_port
+    14: 2                               # protocol, IPV4V6
+    15: 2                               # roaming_protocol, IPV4V6
+    23: false                           # user_visible
+  }
+  2: {                                                # apn
+    1: {"Netsvcs XCAP"}                               # name
+    2: {"netsvcs"}                                    # value
+    3: 11                                             # type, XCAP
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    14: 2                                             # protocol, IPV4V6
+    15: 2                                             # roaming_protocol, IPV4V6
+    23: false                                         # user_visible
+  }
+}
+4: {                                                          # configs
+  2: {                                                        # config
+    1: {"call_forwarding_map_non_number_to_voicemail_bool"}   # key
+    5: true                                                   # bool_value
+  }
+  2: {                                            # config
+    1: {"carrier_cross_sim_ims_available_bool"}   # key
+    5: false                                      # bool_value
+  }
+  2: {                                                    # config
+    1: {"carrier_default_wfc_ims_roaming_enabled_bool"}   # key
+    5: true                                               # bool_value
+  }
+  2: {                                        # config
+    1: {"carrier_supports_ss_over_ut_bool"}   # key
+    5: true                                   # bool_value
+  }
+  2: {                              # config
+    1: {"carrier_ussd_method_int"}  # key
+    3: 2                            # int_value
+  }
+  2: {                                    # config
+    1: {"carrier_volte_available_bool"}   # key
+    5: true                               # bool_value
+  }
+  2: {                                      # config
+    1: {"carrier_wfc_ims_available_bool"}   # key
+    5: true                                 # bool_value
+  }
+  2: {                            # config
+    1: {"gps.es_extension_sec"}   # key
+    2: {"300"}                    # text_value
+  }
+  2: {                                    # config
+    1: {"hide_lte_plus_data_icon_bool"}   # key
+    5: false                              # bool_value
+  }
+  2: {                                            # config
+    1: {"iwlan.epdg_address_priority_int_array"}  # key
+    7: {                                          # int_array
+      1: 0                                        # item
+      1: 1                                        # item
+    }
+  }
+  2: {                                        # config
+    1: {"iwlan.epdg_static_address_string"}   # key
+    2: {"epdg.epc.mnc720.mcc302.pub.3gppnetwork.org"}  # text_value
+  }
+  2: {                                            # config
+    1: {"iwlan.key_error_policy_config_string"}   # key
+    2: {                                          # text_value
+      "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDe"
+      "tails\": [\"24\"],\"RetryArray\": [\"10\", \"20\", \"20\", \"20\"],\"UnthrottlingEvents\": [\"AP"
+      "M_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+    }
+  }
+  2: {                      # config
+    1: {"maxImageHeight"}   # key
+    3: 1944                 # int_value
+  }
+  2: {                    # config
+    1: {"maxImageWidth"}  # key
+    3: 2592               # int_value
+  }
+  2: {                      # config
+    1: {"maxMessageSize"}   # key
+    3: 1048576              # int_value
+  }
+  2: {                        # config
+    1: {"maxSubjectLength"}   # key
+    3: 80                     # int_value
+  }
+  2: {                                        # config
+    1: {"non_roaming_operator_string_array"}  # key
+    6: {                                      # text_array
+      1: {"302220"}                           # item
+      1: {"302370"}                           # item
+      1: {"302610"}                           # item
+      1: {"302660"}                           # item
+      1: {"302780"}                           # item
+    }
+  }
+  2: {                                        # config
+    1: {"read_only_apn_types_string_array"}   # key
+    6: {}                                     # text_array
+  }
+  2: {                      # config
+    1: {"recipientLimit"}   # key
+    3: 20                   # int_value
+  }
+  2: {                            # config
+    1: {"smsToMmsTextThreshold"}  # key
+    3: 6                          # int_value
+  }
+  2: {                                                        # config
+    1: {"use_wfc_home_network_mode_in_roaming_network_bool"}  # key
+    5: true                                                   # bool_value
+  }
+  2: {                                              # config
+    1: {"voicemail_notification_persistent_bool"}   # key
+    5: true                                         # bool_value
+  }
+  2: {                                                # config
+    1: {"wfc_emergency_address_carrier_app_string"}   # key
+    2: {"com.google.android.wfcactivation/.WfcActivationCanadaActivity"}  # text_value
+  }
+  2: {                              # config
+    1: {"wfc_spn_format_idx_int"}   # key
+    3: 1                            # int_value
+  }
+}
+8: {1: 1625253895}  # canonical_name

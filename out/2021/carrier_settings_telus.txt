@@ -1,0 +1,216 @@
+1: {"telus_ca"}           # canonical_name
+2: 30000000068            # version
+3: {                      # apns
+  2: {                    # apn
+    1: {"TELUS ISP"}      # name
+    2: {"isp.telus.com"}  # value
+    3: 4                  # type, DUN
+    24: false             # user_editable
+  }
+  2: {                                                # apn
+    1: {"TELUS SP"}                                   # name
+    2: {"sp.telus.com"}                               # value
+    3: 1                                              # type, DEFAULT
+    3: 2                                              # type, MMS
+    3: 3                                              # type, SUPL
+    3: 5                                              # type, HIPRI
+    3: 9                                              # type, IA
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    11: {"http://aliasredirect.net/proxy/mmsc"}       # mmsc
+    12: {"mmscproxy.mobility.ca"}                     # mmsc_proxy
+    13: {"8799"}                                      # mmsc_proxy_port
+    24: false                                         # user_editable
+  }
+  2: {                                            # apn
+    1: {"TELUS Services"}                         # name
+    2: {"services.telus.com"}                     # value
+    3: 2                                          # type, MMS
+    4: {"18"}                                     # bearer_bitmask
+    11: {"http://aliasredirect.net/proxy/mmsc"}   # mmsc
+    12: {"mmscproxy.mobility.ca"}                 # mmsc_proxy
+    13: {"8799"}                                  # mmsc_proxy_port
+    14: 1                                         # protocol, IPV6
+    15: 2                                         # roaming_protocol, IPV4V6
+    24: false                                     # user_editable
+  }
+  2: {                            # apn
+    1: {"TELUS IMS"}              # name
+    2: {"ims"}                    # value
+    3: 7                          # type, IMS
+    4: {"3|9|10|11|14|15|18|20"}  # bearer_bitmask
+    14: 1                         # protocol, IPV6
+    15: 2                         # roaming_protocol, IPV4V6
+    23: false                     # user_visible
+  }
+  2: {                # apn
+    1: {"TELUS SOS"}  # name
+    2: {"sos"}        # value
+    3: 10             # type, EMERGENCY
+    14: 1             # protocol, IPV6
+    15: 2             # roaming_protocol, IPV4V6
+    23: false         # user_visible
+  }
+  2: {                          # apn
+    1: {"TELUS Services"}       # name
+    2: {"services.telus.com"}   # value
+    3: 11                       # type, XCAP
+    14: 1                       # protocol, IPV6
+    15: 2                       # roaming_protocol, IPV4V6
+    23: false                   # user_visible
+  }
+}
+4: {                                          # configs
+  2: {                                        # config
+    1: {"always_play_remote_hold_tone_bool"}  # key
+    5: true                                   # bool_value
+  }
+  2: {                                            # config
+    1: {"carrier_cross_sim_ims_available_bool"}   # key
+    5: false                                      # bool_value
+  }
+  2: {                                        # config
+    1: {"carrier_default_wfc_ims_mode_int"}   # key
+    3: 1                                      # int_value
+  }
+  2: {                                                # config
+    1: {"carrier_default_wfc_ims_roaming_mode_int"}   # key
+    3: 1                                              # int_value
+  }
+  2: {                                        # config
+    1: {"carrier_supports_ss_over_ut_bool"}   # key
+    5: true                                   # bool_value
+  }
+  2: {                              # config
+    1: {"carrier_ussd_method_int"}  # key
+    3: 2                            # int_value
+  }
+  2: {                                    # config
+    1: {"carrier_volte_available_bool"}   # key
+    5: true                               # bool_value
+  }
+  2: {                                      # config
+    1: {"carrier_wfc_ims_available_bool"}   # key
+    5: true                                 # bool_value
+  }
+  2: {                                # config
+    1: {"display_hd_plus_icon_bool"}  # key
+    5: true                           # bool_value
+  }
+  2: {                              # config
+    1: {"editable_wfc_mode_bool"}   # key
+    5: false                        # bool_value
+  }
+  2: {                            # config
+    1: {"gps.es_extension_sec"}   # key
+    2: {"300"}                    # text_value
+  }
+  2: {                                      # config
+    1: {"gsm_cdma_calls_can_be_hd_audio"}   # key
+    5: false                                # bool_value
+  }
+  2: {                                # config
+    1: {"hide_enhanced_4g_lte_bool"}  # key
+    5: true                           # bool_value
+  }
+  2: {                                    # config
+    1: {"hide_lte_plus_data_icon_bool"}   # key
+    5: false                              # bool_value
+  }
+  2: {                                    # config
+    1: {"ims_conference_size_limit_int"}  # key
+    3: 2                                  # int_value
+  }
+  2: {                                            # config
+    1: {"is_ims_conference_size_enforced_bool"}   # key
+    5: true                                       # bool_value
+  }
+  2: {                                                # config
+    1: {"iwlan.add_ke_to_child_session_rekey_bool"}   # key
+    5: true                                           # bool_value
+  }
+  2: {                                              # config
+    1: {"iwlan.child_sa_rekey_hard_timer_sec_int"}  # key
+    3: 14500                                        # int_value
+  }
+  2: {                                              # config
+    1: {"iwlan.child_sa_rekey_soft_timer_sec_int"}  # key
+    3: 14400                                        # int_value
+  }
+  2: {                                            # config
+    1: {"iwlan.diffie_hellman_groups_int_array"}  # key
+    7: {                                          # int_array
+      1: 14                                       # item
+    }
+  }
+  2: {                                            # config
+    1: {"iwlan.epdg_address_priority_int_array"}  # key
+    7: {                                          # int_array
+      1: 0                                        # item
+    }
+  }
+  2: {                                        # config
+    1: {"iwlan.epdg_static_address_string"}   # key
+    2: {"epdg.epc.mnc220.mcc302.pub.3gppnetwork.org"}  # text_value
+  }
+  2: {                                        # config
+    1: {"iwlan.ike_rekey_hard_timer_in_sec"}  # key
+    3: 71100                                  # int_value
+  }
+  2: {                                          # config
+    1: {"iwlan.ike_rekey_soft_timer_sec_int"}   # key
+    3: 71000                                    # int_value
+  }
+  2: {                                            # config
+    1: {"iwlan.key_error_policy_config_string"}   # key
+    2: {                                          # text_value
+      "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDe"
+      "tails\": [\"24\"],\"RetryArray\": [],\"UnthrottlingEvents\": [\"WIFI_CALLING_DISABLE_EVE"
+      "NT\"]}]}]"
+    }
+  }
+  2: {                      # config
+    1: {"maxImageHeight"}   # key
+    3: 1944                 # int_value
+  }
+  2: {                    # config
+    1: {"maxImageWidth"}  # key
+    3: 2592               # int_value
+  }
+  2: {                      # config
+    1: {"maxMessageSize"}   # key
+    3: 2097152              # int_value
+  }
+  2: {                        # config
+    1: {"maxSubjectLength"}   # key
+    3: 80                     # int_value
+  }
+  2: {                                        # config
+    1: {"read_only_apn_types_string_array"}   # key
+    6: {}                                     # text_array
+  }
+  2: {                      # config
+    1: {"recipientLimit"}   # key
+    3: 10                   # int_value
+  }
+  2: {                            # config
+    1: {"smsToMmsTextThreshold"}  # key
+    3: 5                          # int_value
+  }
+  2: {                                              # config
+    1: {"voicemail_notification_persistent_bool"}   # key
+    5: true                                         # bool_value
+  }
+  2: {                                # config
+    1: {"volte_replacement_rat_int"}  # key
+    3: 3                              # int_value
+  }
+  2: {                                                # config
+    1: {"wfc_emergency_address_carrier_app_string"}   # key
+    2: {"com.google.android.wfcactivation/.WfcActivationActivity"}  # text_value
+  }
+  2: {                              # config
+    1: {"wfc_spn_format_idx_int"}   # key
+    3: 1                            # int_value
+  }
+}
+8: {1: 1625253895}  # canonical_name
