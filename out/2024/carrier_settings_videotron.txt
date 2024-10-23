@@ -1,0 +1,382 @@
+1: {"videotron_ca"}                                   # canonical_name
+2: 56000000008                                        # version
+3: {                                                  # apns
+  2: {                                                # apn
+    1: {"Media"}                                      # name
+    2: {"media.ng"}                                   # value
+    3: 1                                              # type, DEFAULT
+    3: 2                                              # type, MMS
+    3: 3                                              # type, SUPL
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    11: {"http://media.videotron.com"}                # mmsc
+    24: false                                         # user_editable
+  }
+  2: {                                  # apn
+    1: {"MMS and XCAP over iWLAN"}      # name
+    2: {"xcap"}                         # value
+    3: 2                                # type, MMS
+    3: 11                               # type, XCAP
+    4: {"18"}                           # bearer_bitmask
+    11: {"http://media.videotron.com"}  # mmsc
+    23: false                           # user_visible
+  }
+  2: {                                # apn
+    1: {"LTE XCAP"}                   # name
+    2: {"xcap"}                       # value
+    3: 11                             # type, XCAP
+    4: {"1|2|3|9|10|11|13|14|15|20"}  # bearer_bitmask
+    23: false                         # user_visible
+  }
+  2: {                # apn
+    1: {"LTE IMS"}    # name
+    2: {"ims"}        # value
+    3: 7              # type, IMS
+    4: {"14|18|20"}   # bearer_bitmask
+    14: 1             # protocol, IPV6
+    15: 1             # roaming_protocol, IPV6
+    23: false         # user_visible
+    24: false         # user_editable
+  }
+}
+4: {                                      # configs
+  2: {                                    # config
+    1: {"5g_icon_configuration_string"}   # key
+    2: {                                  # text_value
+      "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_"
+      "rrc_con:5G"
+    }
+  }
+  2: {                                              # config
+    1: {"additional_nr_advanced_bands_int_array"}   # key
+    7: {                                            # int_array
+      1: 78                                         # item
+    }
+  }
+  2: {                              # config
+    1: {"bsf.bsf_server_port_int"}  # key
+    3: 8080                         # int_value
+  }
+  2: {                                            # config
+    1: {"carrier_cross_sim_ims_available_bool"}   # key
+    5: false                                      # bool_value
+  }
+  2: {                                        # config
+    1: {"carrier_default_wfc_ims_mode_int"}   # key
+    3: 1                                      # int_value
+  }
+  2: {                                                    # config
+    1: {"carrier_default_wfc_ims_roaming_enabled_bool"}   # key
+    5: true                                               # bool_value
+  }
+  2: {                                          # config
+    1: {"carrier_nr_availabilities_int_array"}  # key
+    7: {                                        # int_array
+      1: 1                                      # item
+    }
+  }
+  2: {                                        # config
+    1: {"carrier_supports_ss_over_ut_bool"}   # key
+    5: true                                   # bool_value
+  }
+  2: {                              # config
+    1: {"carrier_ussd_method_int"}  # key
+    3: 2                            # int_value
+  }
+  2: {                                    # config
+    1: {"carrier_volte_available_bool"}   # key
+    5: true                               # bool_value
+  }
+  2: {                                      # config
+    1: {"carrier_wfc_ims_available_bool"}   # key
+    5: true                                 # bool_value
+  }
+  2: {                                    # config
+    1: {"editable_enhanced_4g_lte_bool"}  # key
+    5: false                              # bool_value
+  }
+  2: {                            # config
+    1: {"gps.es_extension_sec"}   # key
+    2: {"300"}                    # text_value
+  }
+  2: {                                    # config
+    1: {"hide_lte_plus_data_icon_bool"}   # key
+    5: false                              # bool_value
+  }
+  2: {                                # config
+    1: {"ims.ims_user_agent_string"}  # key
+    2: {"Videotron #MODEL# #BUILD#"}  # text_value
+  }
+  2: {                                  # config
+    1: {"ims.sip_timer_f_millis_int"}   # key
+    3: 32000                            # int_value
+  }
+  2: {                                  # config
+    1: {"ims.sip_timer_j_millis_int"}   # key
+    3: 32000                            # int_value
+  }
+  2: {                                          # config
+    1: {"ims_reasoninfo_mapping_string_array"}  # key
+    6: {                                        # text_array
+      1: {"510|Call completed elsewhere|1014"}  # item
+      1: {"*|Call is dropped due to Wi-Fi signal is degraded|1407"}  # item
+    }
+  }
+  2: {                                                            # config
+    1: {"imsemergency.emergency_registration_timer_millis_int"}   # key
+    3: 10000                                                      # int_value
+  }
+  2: {                                                            # config
+    1: {"imsss.network_initiated_ussd_over_ims_supported_bool"}   # key
+    5: false                                                      # bool_value
+  }
+  2: {                                  # config
+    1: {"imsss.ut_as_server_port_int"}  # key
+    3: 8090                             # int_value
+  }
+  2: {                                # config
+    1: {"imsss.ut_iptype_home_int"}   # key
+    3: 0                              # int_value
+  }
+  2: {                                  # config
+    1: {"imsss.ut_iptype_roaming_int"}  # key
+    3: 0                                # int_value
+  }
+  2: {                                                  # config
+    1: {"imsss.xcap_over_ut_supported_rats_int_array"}  # key
+    7: {                                                # int_array
+      1: 5                                              # item
+      1: 6                                              # item
+      1: 3                                              # item
+      1: 1                                              # item
+      1: 2                                              # item
+    }
+  }
+  2: {                                                              # config
+    1: {"imsvoice.amrnb_payload_description_bundle"}                # key
+    8: {                                                            # bundle
+      2: {                                                          # config
+        1: {"108"}                                                  # key
+        8: {                                                        # bundle
+          2: {                                                      # config
+            1: {"imsvoice.amr_codec_attribute_payload_format_int"}  # key
+            3: 1                                                    # int_value
+          }
+        }
+      }
+    }
+  }
+  2: {                                                              # config
+    1: {"imsvoice.amrwb_payload_description_bundle"}                # key
+    8: {                                                            # bundle
+      2: {                                                          # config
+        1: {"110"}                                                  # key
+        8: {                                                        # bundle
+          2: {                                                      # config
+            1: {"imsvoice.amr_codec_attribute_payload_format_int"}  # key
+            3: 1                                                    # int_value
+          }
+        }
+      }
+    }
+  }
+  2: {                                                            # config
+    1: {"imsvoice.audio_codec_capability_payload_types_bundle"}   # key
+    8: {                                                          # bundle
+      2: {                                                        # config
+        1: {"imsvoice.amrnb_payload_type_int_array"}              # key
+        7: {                                                      # int_array
+          1: 102                                                  # item
+          1: 108                                                  # item
+        }
+      }
+      2: {                                            # config
+        1: {"imsvoice.amrwb_payload_type_int_array"}  # key
+        7: {                                          # int_array
+          1: 104                                      # item
+          1: 110                                      # item
+        }
+      }
+      2: {                                              # config
+        1: {"imsvoice.dtmfnb_payload_type_int_array"}   # key
+        7: {                                            # int_array
+          1: 97                                         # item
+        }
+      }
+      2: {                                              # config
+        1: {"imsvoice.dtmfwb_payload_type_int_array"}   # key
+        7: {                                            # int_array
+          1: 96                                         # item
+        }
+      }
+    }
+  }
+  2: {                                              # config
+    1: {"imsvoice.conference_factory_uri_string"}   # key
+    2: {"conference@factory.ims.mnc500.mcc302.3gppnetwork.org"}  # text_value
+  }
+  2: {                                                      # config
+    1: {"imsvoice.minimum_session_expires_timer_sec_int"}   # key
+    3: 600                                                  # int_value
+  }
+  2: {                                            # config
+    1: {"imsvoice.prack_supported_for_18x_bool"}  # key
+    5: true                                       # bool_value
+  }
+  2: {                                    # config
+    1: {"imsvoice.srvcc_type_int_array"}  # key
+    7: {}                                 # int_array
+  }
+  2: {                                                    # config
+    1: {"imswfc.emergency_call_over_emergency_pdn_bool"}  # key
+    5: true                                               # bool_value
+  }
+  2: {                                            # config
+    1: {"is_ims_conference_size_enforced_bool"}   # key
+    5: true                                       # bool_value
+  }
+  2: {                                          # config
+    1: {"iwlan_handover_policy_string_array"}   # key
+    6: {                                        # text_array
+      1: {                                      # item
+        "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|I"
+        "WLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      }
+      1: {  # item
+        "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|I"
+        "WLAN, roaming=true, type=disallowed, capabilities=IMS"
+      }
+      1: {"source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"}  # item
+      1: {"source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"}          # item
+      1: {                                                                                # item
+        "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities"
+        "=IMS"
+      }
+    }
+  }
+  2: {                                            # config
+    1: {"lte_plus_threshold_bandwidth_khz_int"}   # key
+    3: 0                                          # int_value
+  }
+  2: {                      # config
+    1: {"maxImageHeight"}   # key
+    3: 1944                 # int_value
+  }
+  2: {                    # config
+    1: {"maxImageWidth"}  # key
+    3: 2592               # int_value
+  }
+  2: {                      # config
+    1: {"maxMessageSize"}   # key
+    3: 3072000              # int_value
+  }
+  2: {                        # config
+    1: {"maxSubjectLength"}   # key
+    3: 80                     # int_value
+  }
+  2: {                                        # config
+    1: {"non_roaming_operator_string_array"}  # key
+    6: {                                      # text_array
+      1: {"302"}                              # item
+    }
+  }
+  2: {                                      # config
+    1: {"qns.idle_eutran_rsrp_int_array"}   # key
+    7: {                                    # int_array
+      1: -114                               # item
+      1: -120                               # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.idle_utran_rscp_int_array"}  # key
+    7: {                                  # int_array
+      1: -103                             # item
+      1: -110                             # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.idle_wifi_rssi_int_array"}   # key
+    7: {                                  # int_array
+      1: -74                              # item
+      1: -80                              # item
+    }
+  }
+  2: {                                  # config
+    1: {"qns.sos_transport_type_int"}   # key
+    3: 2                                # int_value
+  }
+  2: {                                      # config
+    1: {"qns.video_eutran_rsrp_int_array"}  # key
+    7: {                                    # int_array
+      1: -114                               # item
+      1: -120                               # item
+    }
+  }
+  2: {                                      # config
+    1: {"qns.video_utran_rscp_int_array"}   # key
+    7: {                                    # int_array
+      1: -103                               # item
+      1: -110                               # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.video_wifi_rssi_int_array"}  # key
+    7: {                                  # int_array
+      1: -74                              # item
+      1: -80                              # item
+    }
+  }
+  2: {                                      # config
+    1: {"qns.voice_eutran_rsrp_int_array"}  # key
+    7: {                                    # int_array
+      1: -114                               # item
+      1: -120                               # item
+    }
+  }
+  2: {                                      # config
+    1: {"qns.voice_utran_rscp_int_array"}   # key
+    7: {                                    # int_array
+      1: -103                               # item
+      1: -110                               # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.voice_wifi_rssi_int_array"}  # key
+    7: {                                  # int_array
+      1: -74                              # item
+      1: -80                              # item
+    }
+  }
+  2: {                                        # config
+    1: {"read_only_apn_types_string_array"}   # key
+    6: {}                                     # text_array
+  }
+  2: {                      # config
+    1: {"recipientLimit"}   # key
+    3: 20                   # int_value
+  }
+  2: {                            # config
+    1: {"smsToMmsTextThreshold"}  # key
+    3: 6                          # int_value
+  }
+  2: {                                            # config
+    1: {"support_no_reply_timer_for_cfnry_bool"}  # key
+    5: false                                      # bool_value
+  }
+  2: {                                                        # config
+    1: {"use_wfc_home_network_mode_in_roaming_network_bool"}  # key
+    5: true                                                   # bool_value
+  }
+  2: {                                # config
+    1: {"volte_replacement_rat_int"}  # key
+    3: 3                              # int_value
+  }
+  2: {                                                # config
+    1: {"wfc_emergency_address_carrier_app_string"}   # key
+    2: {"com.google.android.wfcactivation/.WfcActivationCanadaActivity"}  # text_value
+  }
+  2: {                              # config
+    1: {"wfc_spn_format_idx_int"}   # key
+    3: 1                            # int_value
+  }
+}
+8: {1: 1706100387}  # canonical_name

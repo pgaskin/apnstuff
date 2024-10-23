@@ -1,0 +1,468 @@
+1: {"rogers_ca"}              # canonical_name
+2: 56000000009                # version
+3: {                          # apns
+  2: {                        # apn
+    1: {"Rogers Tethering"}   # name
+    2: {"ltedata.apn"}        # value
+    3: 4                      # type, DUN
+    14: 2                     # protocol, IPV4V6
+    15: 2                     # roaming_protocol, IPV4V6
+    24: false                 # user_editable
+  }
+  2: {                                    # apn
+    1: {"IMS"}                            # name
+    2: {"ims"}                            # value
+    3: 7                                  # type, IMS
+    4: {"1|2|3|9|10|11|13|14|15|18|20"}   # bearer_bitmask
+    14: 2                                 # protocol, IPV4V6
+    15: 2                                 # roaming_protocol, IPV4V6
+    23: false                             # user_visible
+  }
+  2: {                                                # apn
+    1: {"Rogers Internet"}                            # name
+    2: {"ltemobile.apn"}                              # value
+    3: 1                                              # type, DEFAULT
+    3: 3                                              # type, SUPL
+    3: 5                                              # type, HIPRI
+    3: 9                                              # type, IA
+    3: 2                                              # type, MMS
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    11: {"http://mms.gprs.rogers.com"}                # mmsc
+    12: {"mmsproxy.rogers.com"}                       # mmsc_proxy
+    13: {"80"}                                        # mmsc_proxy_port
+    14: 2                                             # protocol, IPV4V6
+    15: 2                                             # roaming_protocol, IPV4V6
+    24: false                                         # user_editable
+  }
+  2: {                                  # apn
+    1: {"Netsvcs"}                      # name
+    2: {"netsvcs"}                      # value
+    3: 2                                # type, MMS
+    3: 11                               # type, XCAP
+    4: {"18"}                           # bearer_bitmask
+    11: {"http://mms.gprs.rogers.com"}  # mmsc
+    12: {"mmsproxy.rogers.com"}         # mmsc_proxy
+    13: {"80"}                          # mmsc_proxy_port
+    14: 2                               # protocol, IPV4V6
+    15: 2                               # roaming_protocol, IPV4V6
+    23: false                           # user_visible
+  }
+  2: {                                                # apn
+    1: {"Netsvcs XCAP"}                               # name
+    2: {"netsvcs"}                                    # value
+    3: 11                                             # type, XCAP
+    4: {"1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"}  # bearer_bitmask
+    14: 2                                             # protocol, IPV4V6
+    15: 2                                             # roaming_protocol, IPV4V6
+    23: false                                         # user_visible
+  }
+}
+4: {                                      # configs
+  2: {                                    # config
+    1: {"5g_icon_configuration_string"}   # key
+    2: {                                  # text_value
+      "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_"
+      "rrc_con:5G"
+    }
+  }
+  2: {                                              # config
+    1: {"additional_nr_advanced_bands_int_array"}   # key
+    7: {                                            # int_array
+      1: 77                                         # item
+      1: 78                                         # item
+    }
+  }
+  2: {                                                    # config
+    1: {"allow_metered_network_for_cert_download_bool"}   # key
+    5: true                                               # bool_value
+  }
+  2: {                                                        # config
+    1: {"call_forwarding_map_non_number_to_voicemail_bool"}   # key
+    5: true                                                   # bool_value
+  }
+  2: {                                            # config
+    1: {"carrier_cross_sim_ims_available_bool"}   # key
+    5: false                                      # bool_value
+  }
+  2: {                                                    # config
+    1: {"carrier_default_wfc_ims_roaming_enabled_bool"}   # key
+    5: true                                               # bool_value
+  }
+  2: {                                          # config
+    1: {"carrier_nr_availabilities_int_array"}  # key
+    7: {                                        # int_array
+      1: 1                                      # item
+    }
+  }
+  2: {                                        # config
+    1: {"carrier_supports_ss_over_ut_bool"}   # key
+    5: true                                   # bool_value
+  }
+  2: {                              # config
+    1: {"carrier_ussd_method_int"}  # key
+    3: 2                            # int_value
+  }
+  2: {                                    # config
+    1: {"carrier_volte_available_bool"}   # key
+    5: true                               # bool_value
+  }
+  2: {                                      # config
+    1: {"carrier_wfc_ims_available_bool"}   # key
+    5: true                                 # bool_value
+  }
+  2: {                            # config
+    1: {"gps.es_extension_sec"}   # key
+    2: {"300"}                    # text_value
+  }
+  2: {                                # config
+    1: {"hide_enhanced_4g_lte_bool"}  # key
+    5: true                           # bool_value
+  }
+  2: {                                    # config
+    1: {"hide_lte_plus_data_icon_bool"}   # key
+    5: false                              # bool_value
+  }
+  2: {                                                        # config
+    1: {"ims.ims_pdn_enabled_in_no_vops_support_int_array"}   # key
+    7: {                                                      # int_array
+      1: 0                                                    # item
+    }
+  }
+  2: {                                # config
+    1: {"ims.ims_user_agent_string"}  # key
+    2: {"Rogers #MODEL# #BUILD#"}     # text_value
+  }
+  2: {                                          # config
+    1: {"ims.ipv4_sip_mtu_size_cellular_int"}   # key
+    3: 1430                                     # int_value
+  }
+  2: {                                          # config
+    1: {"ims.ipv6_sip_mtu_size_cellular_int"}   # key
+    3: 1430                                     # int_value
+  }
+  2: {                                  # config
+    1: {"ims.sip_timer_f_millis_int"}   # key
+    3: 32000                            # int_value
+  }
+  2: {                                  # config
+    1: {"ims.sip_timer_j_millis_int"}   # key
+    3: 32000                            # int_value
+  }
+  2: {                                    # config
+    1: {"ims.supported_rats_int_array"}   # key
+    7: {                                  # int_array
+      1: 3                                # item
+      1: 1                                # item
+      1: 2                                # item
+      1: 5                                # item
+      1: 6                                # item
+    }
+  }
+  2: {                                                            # config
+    1: {"imsemergency.emergency_registration_timer_millis_int"}   # key
+    3: 10000                                                      # int_value
+  }
+  2: {                                # config
+    1: {"imsi_key_availability_int"}  # key
+    3: 3                              # int_value
+  }
+  2: {                                    # config
+    1: {"imsi_key_download_url_string"}   # key
+    2: {"https://wifiaccess.rogers.com/gc"}  # text_value
+  }
+  2: {                                                    # config
+    1: {"imssms.sms_over_ims_supported_rats_int_array"}   # key
+    7: {                                                  # int_array
+      1: 1                                                # item
+      1: 2                                                # item
+      1: 3                                                # item
+      1: 6                                                # item
+      1: 5                                                # item
+    }
+  }
+  2: {                                                            # config
+    1: {"imsss.network_initiated_ussd_over_ims_supported_bool"}   # key
+    5: false                                                      # bool_value
+  }
+  2: {                                                  # config
+    1: {"imsss.xcap_over_ut_supported_rats_int_array"}  # key
+    7: {                                                # int_array
+      1: 5                                              # item
+      1: 6                                              # item
+      1: 3                                              # item
+      1: 1                                              # item
+      1: 2                                              # item
+    }
+  }
+  2: {                                                              # config
+    1: {"imsvoice.amrnb_payload_description_bundle"}                # key
+    8: {                                                            # bundle
+      2: {                                                          # config
+        1: {"108"}                                                  # key
+        8: {                                                        # bundle
+          2: {                                                      # config
+            1: {"imsvoice.amr_codec_attribute_payload_format_int"}  # key
+            3: 1                                                    # int_value
+          }
+        }
+      }
+    }
+  }
+  2: {                                                              # config
+    1: {"imsvoice.amrwb_payload_description_bundle"}                # key
+    8: {                                                            # bundle
+      2: {                                                          # config
+        1: {"110"}                                                  # key
+        8: {                                                        # bundle
+          2: {                                                      # config
+            1: {"imsvoice.amr_codec_attribute_payload_format_int"}  # key
+            3: 1                                                    # int_value
+          }
+        }
+      }
+    }
+  }
+  2: {                                                            # config
+    1: {"imsvoice.audio_codec_capability_payload_types_bundle"}   # key
+    8: {                                                          # bundle
+      2: {                                                        # config
+        1: {"imsvoice.amrnb_payload_type_int_array"}              # key
+        7: {                                                      # int_array
+          1: 102                                                  # item
+          1: 108                                                  # item
+        }
+      }
+      2: {                                            # config
+        1: {"imsvoice.amrwb_payload_type_int_array"}  # key
+        7: {                                          # int_array
+          1: 104                                      # item
+          1: 110                                      # item
+        }
+      }
+      2: {                                              # config
+        1: {"imsvoice.dtmfnb_payload_type_int_array"}   # key
+        7: {                                            # int_array
+          1: 97                                         # item
+        }
+      }
+      2: {                                              # config
+        1: {"imsvoice.dtmfwb_payload_type_int_array"}   # key
+        7: {                                            # int_array
+          1: 96                                         # item
+        }
+      }
+      2: {                                          # config
+        1: {"imsvoice.evs_payload_type_int_array"}  # key
+        7: {                                        # int_array
+          1: 106                                    # item
+        }
+      }
+    }
+  }
+  2: {                                              # config
+    1: {"imsvoice.conference_factory_uri_string"}   # key
+    2: {"mmtel@conf-factory.ims.mnc720.mcc302.3gppnetwork.org"}  # text_value
+  }
+  2: {                                              # config
+    1: {"imsvoice.conference_subscribe_type_int"}   # key
+    3: 0                                            # int_value
+  }
+  2: {                                                              # config
+    1: {"imsvoice.evs_payload_description_bundle"}                  # key
+    8: {                                                            # bundle
+      2: {                                                          # config
+        1: {"106"}                                                  # key
+        8: {                                                        # bundle
+          2: {                                                      # config
+            1: {"imsvoice.evs_codec_attribute_bitrate_int_array"}   # key
+            7: {                                                    # int_array
+              1: 0                                                  # item
+              1: 6                                                  # item
+            }
+          }
+        }
+      }
+    }
+  }
+  2: {                                          # config
+    1: {"imsvoice.session_refresher_type_int"}  # key
+    3: 2                                        # int_value
+  }
+  2: {                                    # config
+    1: {"imsvoice.srvcc_type_int_array"}  # key
+    7: {                                  # int_array
+      1: 0                                # item
+      1: 1                                # item
+      1: 2                                # item
+    }
+  }
+  2: {                                                    # config
+    1: {"imswfc.emergency_call_over_emergency_pdn_bool"}  # key
+    5: true                                               # bool_value
+  }
+  2: {                                            # config
+    1: {"iwlan.epdg_address_priority_int_array"}  # key
+    7: {                                          # int_array
+      1: 0                                        # item
+      1: 1                                        # item
+    }
+  }
+  2: {                                        # config
+    1: {"iwlan.epdg_static_address_string"}   # key
+    2: {"epdg.epc.mnc720.mcc302.pub.3gppnetwork.org"}  # text_value
+  }
+  2: {                                            # config
+    1: {"iwlan.key_error_policy_config_string"}   # key
+    2: {                                          # text_value
+      "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDe"
+      "tails\": [\"24\"],\"RetryArray\": [\"10\", \"20\", \"20\", \"20\"],\"UnthrottlingEvents\": [\"AP"
+      "M_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+    }
+  }
+  2: {                                          # config
+    1: {"iwlan_handover_policy_string_array"}   # key
+    6: {                                        # text_array
+      1: {                                      # item
+        "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|I"
+        "WLAN, type=disallowed, capabilities=EIMS|MMS|CBS"
+      }
+      1: {"source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|XCAP"}   # item
+      1: {"source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|XCAP"}           # item
+      1: {"source=EUTRAN|IWLAN, target=EUTRAN|IWLAN, type=allowed, capabilities=IMS|XCAP"}      # item
+    }
+  }
+  2: {                      # config
+    1: {"maxImageHeight"}   # key
+    3: 1944                 # int_value
+  }
+  2: {                    # config
+    1: {"maxImageWidth"}  # key
+    3: 2592               # int_value
+  }
+  2: {                      # config
+    1: {"maxMessageSize"}   # key
+    3: 1048576              # int_value
+  }
+  2: {                        # config
+    1: {"maxSubjectLength"}   # key
+    3: 80                     # int_value
+  }
+  2: {                                            # config
+    1: {"min_udp_port_4500_nat_timeout_sec_int"}  # key
+    3: 20                                         # int_value
+  }
+  2: {                                        # config
+    1: {"non_roaming_operator_string_array"}  # key
+    6: {                                      # text_array
+      1: {"302220"}                           # item
+      1: {"302370"}                           # item
+      1: {"302610"}                           # item
+      1: {"302660"}                           # item
+      1: {"302780"}                           # item
+    }
+  }
+  2: {                      # config
+    1: {"prefer_2g_bool"}   # key
+    5: true                 # bool_value
+  }
+  2: {                                                                          # config
+    1: {"qns.choose_wfc_preferred_transport_in_both_bad_condition_int_array"}   # key
+    7: {                                                                        # int_array
+      1: 1                                                                      # item
+      1: 2                                                                      # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.idle_wifi_rssi_int_array"}   # key
+    7: {                                  # int_array
+      1: -65                              # item
+      1: -78                              # item
+    }
+  }
+  2: {                                                # config
+    1: {"qns.ims_cellular_allowed_rat_string_array"}  # key
+    6: {                                              # text_array
+      1: {"LTE"}                                      # item
+      1: {"NR"}                                       # item
+      1: {"3G"}                                       # item
+      1: {"2G"}                                       # item
+    }
+  }
+  2: {                                  # config
+    1: {"qns.mms_rat_preference_int"}   # key
+    3: 2                                # int_value
+  }
+  2: {                                  # config
+    1: {"qns.sos_transport_type_int"}   # key
+    3: 2                                # int_value
+  }
+  2: {                                    # config
+    1: {"qns.video_wifi_rssi_int_array"}  # key
+    7: {                                  # int_array
+      1: -65                              # item
+      1: -78                              # item
+    }
+  }
+  2: {                                    # config
+    1: {"qns.voice_wifi_rssi_int_array"}  # key
+    7: {                                  # int_array
+      1: -65                              # item
+      1: -78                              # item
+    }
+  }
+  2: {                                  # config
+    1: {"qns.xcap_rat_preference_int"}  # key
+    3: 2                                # int_value
+  }
+  2: {                                        # config
+    1: {"read_only_apn_types_string_array"}   # key
+    6: {}                                     # text_array
+  }
+  2: {                      # config
+    1: {"recipientLimit"}   # key
+    3: 20                   # int_value
+  }
+  2: {                            # config
+    1: {"smsToMmsTextThreshold"}  # key
+    3: 6                          # int_value
+  }
+  2: {                                                        # config
+    1: {"use_wfc_home_network_mode_in_roaming_network_bool"}  # key
+    5: true                                                   # bool_value
+  }
+  2: {                                              # config
+    1: {"voicemail_notification_persistent_bool"}   # key
+    5: true                                         # bool_value
+  }
+  2: {                                                # config
+    1: {"wfc_emergency_address_carrier_app_string"}   # key
+    2: {"com.google.android.wfcactivation/.WfcActivationCanadaActivity"}  # text_value
+  }
+  2: {                              # config
+    1: {"wfc_spn_format_idx_int"}   # key
+    3: 1                            # int_value
+  }
+  2: {                                        # config
+    1: {"wifi.carrier_profiles_version_int"}  # key
+    3: 1                                      # int_value
+  }
+  2: {                                            # config
+    1: {"wifi.passpoint_profiles_string_array"}   # key
+    6: {                                          # text_array
+      1: {                                        # item
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile><PPSMO><![CDATA[<MgmtTre"
+        "e xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscri"
+        "ption</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovider"
+        "subscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><"
+        "Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>Ro"
+        "gers Wi-Fi Hotspots</Value></Node><Node><NodeName>FQDN</NodeName><Value>rogers.c"
+        "om</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Rea"
+        "lm</NodeName><Value>wlan.mnc720.mcc302.3gppnetwork.org</Value></Node><Node><Node"
+        "Name>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>302720*</Value></Node><"
+        "Node><NodeName>EAPType</NodeName><Value>50</Value></Node></Node></Node></Node></"
+        "Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+      }
+    }
+  }
+}
+8: {1: 1706100387}  # canonical_name
