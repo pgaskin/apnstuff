@@ -107,16 +107,35 @@ func main() {
 		}
 		fmt.Printf("</td>\n")
 		fmt.Printf("        <td>%s</td>\n", html.EscapeString(key.Type))
-		for _, apn := range groupedAPNs[key] {
-			fmt.Printf("        <td>")
-			fmt.Printf("<b>%s</b><br>", html.EscapeString(apn["apn"]))
-			for _, attr := range apnAttrs {
-				if val, ok := apn[attr]; ok {
-					switch attr {
-					case "mcc", "mnc", "mvno_type", "mvno_match_data", "type", "apn":
-						continue // already grouped by these
+		for i, apn := range groupedAPNs[key] {
+			var isFallback bool
+			if apn == nil {
+				// fall back to the non-mvno-specific match if no apn for the mvno
+				isFallback = true
+				key.MVNOMatchData = ""
+				key.MVNOType = ""
+				if m, ok := groupedAPNs[key]; ok {
+					apn = m[i]
+				}
+			}
+			if isFallback {
+				fmt.Printf("        <td style=\"opacity: 0.5\">")
+			} else {
+				fmt.Printf("        <td>")
+			}
+			if apn != nil {
+				fmt.Printf("<b>%s</b><br>", html.EscapeString(apn["apn"]))
+				for _, attr := range apnAttrs {
+					if val, ok := apn[attr]; ok {
+						switch attr {
+						case "mcc", "mnc", "mvno_type", "mvno_match_data", "type", "apn":
+							continue // already grouped by these
+						}
+						fmt.Printf("%s = %s<br>", html.EscapeString(attr), html.EscapeString(val))
 					}
-					fmt.Printf("%s = %s<br>", html.EscapeString(attr), html.EscapeString(val))
+				}
+				if isFallback {
+					fmt.Printf("<br><i>(fallback since no mvno-specific apn)</i>")
 				}
 			}
 			fmt.Printf("</td>\n")
