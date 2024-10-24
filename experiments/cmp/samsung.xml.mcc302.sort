@@ -1,0 +1,131 @@
+  <apn carrier="Browser" mcc="302" mnc="610" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV6" mmsc="http://mms.bell.ca/mms/wapenc" mvno_match_data="3D" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="610" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV6" mmsc="http://mms.bell.ca/mms/wapenc" mvno_match_data="3E" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="610" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV6" mtu="1500" mmsc="http://mms.bell.ca/mms/wapenc" mvno_match_data="40" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="630" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV4V6" mmsc="http://mmsc48.mmsclab.tdlab.ca/mms/wapenc" mvno_match_data="3E" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="640" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV4V6" mmsc="http://mmsc48.mmsclab.tdlab.ca/mms/wapenc" mvno_match_data="3E" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="690" apn="pda.bell.ca" type="default,mms,supl,dun,xcap" protocol="IPV4V6" mmsc="http://mms.bell.ca/mms/wapenc" mvno_match_data="3E" mvno_type="gid"/>
+  <apn carrier="Browser" mcc="302" mnc="780" apn="pda.stm.sk.ca" type="default,mms,supl,xcap" mmsc="http://mms.sasktel.com" mmsproxy="mig.sasktel.com" mmsport="80" mvno_match_data="5A" mvno_type="gid" protocol="IPV4V6" roaming_protocol="IP"/>
+  <apn carrier="Chatr Internet" mcc="302" mnc="720" apn="chatrweb.apn" type="default,mms,supl" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="D2" mvno_type="gid" mtu="1430"/>
+  <apn carrier="chatr Tethering" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="D2" mvno_type="gid" mtu="1430"/>
+  <apn carrier="Cityfone Internet" mcc="302" mnc="720" apn="ltemobile.apn" type="default,mms,supl" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="CC" mvno_type="gid" mtu="1430"/>
+  <apn carrier="Cityfone Internet" mnc="720" mcc="302" apn="ltemobile.apn" type="default,mms,supl,fota" protocol="IPV4V6" roaming_protocol="IP" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" mvno_type="spn" mvno_match_data="CITYFONE" mtu="1430"/>
+  <apn carrier="Cityfone Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_type="spn" mvno_match_data="CITYFONE" mtu="1430"/>
+  <apn carrier="Cityfone Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="CC" mvno_type="gid" mtu="1430"/>
+  <apn carrier="CNT Internet" mcc="302" mnc="370" apn="internet.cnt.net.ec" type="default,supl"/>
+  <apn carrier="CNT Internet" mcc="302" mnc="37" apn="internet.cnt.net.ec" type="default,supl"/>
+  <apn carrier="Eastlink Internet" mcc="302" mnc="270" apn="wisp.mobi.eastlink.ca" type="default,supl" mvno_match_data="B6" mvno_type="gid"/>
+  <apn carrier="Eastlink MMS" mcc="302" mnc="270" apn="mms.mobi.eastlink.ca" mmsc="http://mmss.mobi.eastlink.ca" mmsproxy="10.232.12.49" mmsport="8080" type="mms" mvno_match_data="B6" mvno_type="gid"/>
+  <apn carrier="Eastlink VoLTE" mcc="302" mnc="270" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IP" user_visible="false"/>
+  <apn carrier="Eastlink Xcap" mcc="302" mnc="270" apn="services" type="xcap" protocol="IPV4V6" roaming_protocol="IP" user_visible="false"/>
+  <apn carrier="Fido ePDG" mcc="302" mnc="370" apn="netsvcs" type="epdg" proxy="mmsproxy.fido.ca" port="80" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="DD" mvno_type="gid" mtu="1430" user_visible="false" authtype="0"/>
+  <apn carrier="Fido LTE" mcc="302" mnc="370" apn="ltemobile.apn" type="default,mms,supl,fota" mmsproxy="mmsproxy.fido.ca" mmsc="http://mms.fido.ca" mmsport="80" mvno_match_data="DD" mvno_type="gid" protocol="IPV6" roaming_protocol="IPV4V6" mtu="1430"/>
+  <apn carrier="Fido LTE" mcc="302" mnc="370" apn="ltemobile.apn" type="default,mms,supl,fota" mmsproxy="mmsproxy.fido.ca" mmsc="http://mms.fido.ca" mmsport="80" protocol="IPV4V6" roaming_protocol="IP" mtu="1430"/>
+  <apn carrier="Fizz" mcc="302" mnc="500" apn="mobile.bm" type="default" mtu="1500" mvno_match_data="55" mvno_type="gid"/>
+  <apn carrier="Fizz MMS" mcc="302" mnc="500" apn="mobile.bm" type="mms" mtu="1500" mmsport="80" mmsc="http://mms.mobile.bm" mmsproxy="mmsproxy.mobile.bm" mvno_match_data="55" mvno_type="gid"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6332" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6336" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6530" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6538" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6630" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6636" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6638" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="7330" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="8030" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" protocol="IPV4V6" mvno_type="gid" mvno_match_data="9030" type="ims" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" type="ims" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="4B" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="220" apn="ims" type="ims" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="54" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="221" apn="ims" type="ims" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="4B" mvno_type="gid"/>
+  <apn carrier="IMS" mcc="302" mnc="221" apn="ims" type="ims" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="54" mvno_type="gid"/>
+  <apn carrier="IMS" mcc="302" mnc="370" apn="ims" type="ims" mvno_match_data="DD" mvno_type="gid" protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1430" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="490" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1280" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="500" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" mtu="1460" mvno_match_data="53" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="500" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" mtu="1460" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="510" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" mtu="1460" mvno_match_data="53" mvno_type="gid"/>
+  <apn carrier="IMS" mcc="302" mnc="520" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" mtu="1460" mvno_match_data="53" mvno_type="gid"/>
+  <apn carrier="IMS" mcc="302" mnc="610" apn="ims" type="ims" authtype="0" mtu="1500" protocol="IPV6" roaming_protocol="IPV6" mvno_match_data="3D" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="610" apn="ims" type="ims" authtype="0" mtu="1500" protocol="IPV6" roaming_protocol="IPV6" mvno_match_data="3E" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="610" apn="ims" type="ims" authtype="0" mtu="1500" protocol="IPV6" roaming_protocol="IPV6" mvno_match_data="40" mvno_type="gid" user_visible="false"/>
+  <apn carrier="IMS" mcc="302" mnc="630" apn="ims" type="ims" authtype="0" mtu="1500" protocol="IPV6" roaming_protocol="IPV6"/>
+  <apn carrier="IMS" mcc="302" mnc="640" apn="ims" type="ims" authtype="0" mtu="1500" protocol="IPV6" roaming_protocol="IPV6"/>
+  <apn carrier="IMS" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" mtu="1430" user_visible="false"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6332" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6336" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6530" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6538" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6630" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6636" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6638" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="7330" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="8030" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="220" apn="internet" protocol="IPV4V6" mvno_type="gid" mvno_match_data="9030" roaming_protocol="IPV4V6" type="default,supl,dun"/>
+  <apn carrier="Internet" mcc="302" mnc="490" apn="internet.freedommobile.ca" type="default,supl" protocol="IPV4V6" mtu="1500"/>
+  <apn carrier="Internet" mcc="302" mnc="610" apn="connect" protocol="IPV4V6" roaming_protocol="IPV4V6" mmsc="http://mms.luckymobile.ca/mms/wapenc" type="default,supl,mms" mvno_match_data="42" mvno_type="gid"/>
+  <apn carrier="Koodo Services" mcc="302" mnc="220" authtype="0" apn="services.koodo.com" type="xcap" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="4B" mvno_type="gid" profile_id="14" user_visible="false"/>
+  <apn carrier="Koodo Services" mcc="302" mnc="221" authtype="0" apn="services.koodo.com" type="xcap" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="4B" mvno_type="gid" profile_id="14"/>
+  <apn carrier="Koodo SP" mcc="302" mnc="220" apn="sp.koodo.com" type="default,mms,supl,dun" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_match_data="4B" mvno_type="gid"/>
+  <apn carrier="Koodo SP" mcc="302" mnc="221" apn="sp.koodo.com" type="default,mms,supl" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_match_data="4B" mvno_type="gid"/>
+  <apn carrier="LTE Tethering" mcc="302" mnc="370" apn="ltedata.apn" type="dun" mvno_match_data="DD" mvno_type="gid" protocol="IPV4V6" roaming_protocol="IP" mtu="1430"/>
+  <apn carrier="LTE Tethering" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV4V6" roaming_protocol="IP" mtu="1430"/>
+  <apn carrier="Media" mcc="302" mnc="520" apn="media.ng" mmsc="http://media.videotron.com" type="default,supl,mms"/>
+  <apn carrier="MMS" mcc="302" mnc="490" apn="mms.freedommobile.ca" mmsc="http://mms.freedommobile.ca" mmsproxy="74.115.197.70" mmsport="8080" type="mms" mtu="1300"/>
+  <apn carrier="Mobile Internet" mcc="302" mnc="220" apn="sp.mb.com" type="default,mms,supl" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_match_data="50" mvno_type="gid"/>
+  <apn carrier="Mobile Internet" mcc="302" mnc="220" apn="sp.mb.com" type="default,supl,mms" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_type="gid" mvno_match_data="4D"/>
+  <apn carrier="Mobile Internet" mcc="302" mnc="221" apn="sp.mb.com" type="default,supl,mms" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_type="gid" mvno_match_data="4D"/>
+  <apn carrier="MOMMS" mcc="302" mnc="320" apn="mms.davewireless.com" mmsc="http://mms.mobilicity.net" mmsproxy="10.100.3.4" mmsport="8080" type="mms"/>
+  <apn carrier="MOMMS" mcc="302" mnc="320" apn="mms.davewireless.com" mmsc="http://mms.mobilicity.net" mmsproxy="10.100.3.4" mmsport="8080" type="mms" mvno_match_data="52" mvno_type="gid"/>
+  <apn carrier="MOWAP" mcc="302" mnc="320" apn="wap.davewireless.com" type="default,supl"/>
+  <apn carrier="MOWAP" mcc="302" mnc="320" apn="wap.davewireless.com" type="default,supl" mvno_match_data="52" mvno_type="gid"/>
+  <apn carrier="MTS Internet" mcc="302" mnc="370" apn="sp.mts" type="default,mms,supl" mmsc="http://mmsc2.mts.net/" mmsproxy="wapgw1.mts.net" mmsport="9201" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="2C" mvno_type="gid"/>
+  <apn carrier="MTS Internet" mcc="302" mnc="660" apn="sp.mts" type="default,mms,supl" mmsc="http://mmsc2.mts.net/" mmsproxy="wapgw1.mts.net" mmsport="9201" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="2C" mvno_type="gid"/>
+  <apn carrier="MTS Tethering" mcc="302" mnc="370" apn="internet.mts" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="2C"/>
+  <apn carrier="MTS Tethering" mcc="302" mnc="660" apn="internet.mts" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="2C"/>
+  <apn carrier="Netsvcs" mcc="302" mnc="370" apn="netsvcs" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" mtu="1430" profile_id="14" authtype="0" user_visible="false"/>
+  <apn carrier="Netsvcs" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" mtu="1430" profile_id="14" authtype="0" user_visible="false"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6332" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6336" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6530" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6538" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6630" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6636" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="6638" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="7330" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="8030" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="OTA" mcc="302" mnc="220" apn="ota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="9030" roaming_protocol="IPV4V6" type="fota"/>
+  <apn carrier="PC mobile" mcc="302" mnc="221" apn="sp.mb.com" type="default,mms,supl" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" mvno_match_data="50" mvno_type="gid"/>
+  <apn carrier="Rogers EPDG" mcc="302" mnc="720" apn="netsvcs" type="epdg" proxy="mmsproxy.rogers.com" port="80" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mtu="1430" user_visible="false" authtype="0"/>
+  <apn carrier="Rogers Internet" mcc="302" mnc="720" apn="ltemobile.apn" type="default,mms,supl" mmsproxy="mmsproxy.rogers.com" mmsc="http://mms.gprs.rogers.com" mmsport="80" protocol="IPV6" roaming_protocol="IPV4V6" mtu="1430"/>
+  <apn carrier="Rogers Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mtu="1430"/>
+  <apn carrier="Tbaytel Internet" mnc="720" mcc="302" apn="ltemobile.apn" type="default,mms,supl,fota" protocol="IPV4V6" roaming_protocol="IP" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" mvno_type="gid" mvno_match_data="BA" mtu="1430"/>
+  <apn carrier="Tbaytel Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="BA" mtu="1430"/>
+  <apn carrier="TELUS ISP" mcc="302" mnc="220" apn="isp.telus.com" type="dun" mvno_type="gid" mvno_match_data="54"/>
+  <apn carrier="TELUS ISP" mcc="302" mnc="221" apn="isp.telus.com" type="dun" mvno_type="gid" mvno_match_data="54"/>
+  <apn carrier="TELUS Services" mcc="302" mnc="220" apn="services.telus.com" type="xcap" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="54" mvno_type="gid" profile_id="14" authtype="0" user_visible="false"/>
+  <apn carrier="TELUS Services" mcc="302" mnc="221" apn="services.telus.com" type="xcap" mtu="1440" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="54" mvno_type="gid" profile_id="14" authtype="0"/>
+  <apn carrier="TELUS SP" mcc="302" mnc="220" apn="sp.telus.com" authtype="0" type="default,mms,supl" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" protocol="IP" mvno_match_data="54" mvno_type="gid"/>
+  <apn carrier="TELUS SP" mcc="302" mnc="221" apn="sp.telus.com" authtype="0" type="default,mms,supl" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" protocol="IP" mvno_match_data="54" mvno_type="gid"/>
+  <apn carrier="Tethered Mobile Internet" mcc="302" mnc="220" apn="isp.mb.com" type="dun" mvno_type="gid" mvno_match_data="4D"/>
+  <apn carrier="Tethered Mobile Internet" mcc="302" mnc="220" apn="isp.mb.com" type="dun" mvno_type="gid" mvno_match_data="50"/>
+  <apn carrier="Tethered Mobile Internet" mcc="302" mnc="221" apn="isp.mb.com" type="dun" mvno_type="gid" mvno_match_data="4D"/>
+  <apn carrier="Videotron" mcc="302" mnc="500" apn="media.ng" authtype="0" mmsc="http://media.videotron.com" type="default,supl,mms"/>
+  <apn carrier="Videotron" mcc="302" mnc="500" apn="media.ng" mmsc="http://media.videotron.com" authtype="0" type="default,supl,mms" mvno_match_data="53" mvno_type="gid"/>
+  <apn carrier="Videotron" mcc="302" mnc="510" apn="media.ng" mmsc="http://media.videotron.com" type="default,supl,mms" mvno_match_data="53" mvno_type="gid"/>
+  <apn carrier="Videotron" mcc="302" mnc="520" apn="media.ng" mmsc="http://media.videotron.com" type="default,supl,mms" mvno_match_data="53" mvno_type="gid"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6332" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6336" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6530" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6538" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6630" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6636" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="6638" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="7330" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="8030" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="220" apn="xcap" protocol="IPV4V6" mmsc="http://mms.mnc340.mcc313.pub.3gppnetwork.org/mmsc" mmsport="8080" mvno_type="gid" mvno_match_data="9030" roaming_protocol="IPV4V6" type="mms,xcap"/>
+  <apn carrier="XCAP" mcc="302" mnc="490" apn="xcap.freedommobile.ca" type="xcap" protocol="IPV4V6" roaming_protocol="IP" mtu="1300" user_visible="false"/>
+  <apn carrier="XCAP" mcc="302" mnc="500" apn="xcap" type="xcap" mtu="1460" mvno_match_data="53" mvno_type="gid" profile_id="14" authtype="0" user_visible="false"/>
+  <apn carrier="XCAP" mcc="302" mnc="500" apn="xcap" type="xcap" mtu="1460" profile_id="14" authtype="0" user_visible="false"/>
+  <apn carrier="XCAP" mcc="302" mnc="510" apn="xcap" type="xcap" mtu="1460" mvno_match_data="53" mvno_type="gid" profile_id="14" authtype="0"/>
+  <apn carrier="XCAP" mcc="302" mnc="520" apn="xcap" type="xcap" mtu="1460" mvno_match_data="53" mvno_type="gid" profile_id="14" authtype="0"/>
+  <apn carrier="Ztar Internet" mcc="302" mnc="720" apn="ltemobile.apn" type="default,mms,supl" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="302720x98" mvno_type="imsi" mtu="1430"/>
+  <apn carrier="Ztar Internet" mcc="302" mnc="720" apn="ltemobile.apn" type="default,mms,supl" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="D4" mvno_type="gid" mtu="1430"/>
+  <apn carrier="Ztar Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" roaming_protocol="IP" mvno_match_data="302720x98" mvno_type="imsi" mtu="1430"/>
+  <apn carrier="Ztar Tethering" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_match_data="D4" mvno_type="gid" mtu="1430"/>
