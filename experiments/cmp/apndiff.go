@@ -11,20 +11,27 @@ import (
 	"maps"
 	"os"
 	"slices"
+	"strconv"
 	"strings"
 )
 
-// go run apndiff.go google.xml.mcc302 motorola.xml.mcc302 samsung.xml.mcc302 > mcc302.html
+// go run apndiff.go 0 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.html
+// go run apndiff.go 0 google.xml motorola.xml samsung.xml > mcc302-good.html
+// go run apndiff.go 1 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.split.html
+// go run apndiff.go 1 google.xml motorola.xml samsung.xml > mcc302-good.split.html
 
 func main() {
-	const splitAPNTypes = false // set this to true to split apn types into separate rows
+	splitAPNTypes, err := strconv.ParseBool(os.Args[1])
+	if err != nil {
+		panic(err)
+	}
 
 	var (
-		files    = os.Args[1:]
+		files    = os.Args[2:]
 		fileAPNs = make([][]APN, len(files))
 	)
 	for i, name := range files {
-		apns, err := readAPNs(name, splitAPNTypes)
+		apns, err := readAPNs(name, splitAPNTypes, "302")
 		if err != nil {
 			panic(fmt.Errorf("%s: %w", name, err))
 		}
@@ -79,7 +86,7 @@ func main() {
 	fmt.Println(`        <th>Match</th>`)
 	fmt.Println(`        <th>Type</th>`)
 	for _, name := range files {
-		fmt.Printf("        <th>%s</th>\n", html.EscapeString(name))
+		fmt.Printf("        <th>%s</th>\n", html.EscapeString(strings.TrimSuffix(name, ".xml")))
 	}
 	fmt.Println(`      </tr>`)
 	fmt.Println(`    </thead>`)
@@ -163,7 +170,7 @@ var apnAttrs = []string{
 	"user_editable",
 }
 
-func readAPNs(name string, splitAPNTypes bool) ([]APN, error) {
+func readAPNs(name string, splitAPNTypes bool, filterMCC string) ([]APN, error) {
 	buf, err := os.ReadFile(name)
 	if err != nil {
 		return nil, err
@@ -192,6 +199,9 @@ func readAPNs(name string, splitAPNTypes bool) ([]APN, error) {
 			line, _ := dec.InputPos()
 			if tok.Name == (xml.Name{Local: "apn"}) {
 				apn := make(APN)
+				if filterMCC != "" && !slices.ContainsFunc(tok.Attr, func(e xml.Attr) bool { return e.Name.Local == "mcc" && e.Value == filterMCC }) {
+					continue
+				}
 				for _, attr := range tok.Attr {
 					// yes, this is inefficient
 					if !slices.Contains(apnAttrs, attr.Name.Local) {
