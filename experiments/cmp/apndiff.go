@@ -120,10 +120,11 @@ func main() {
 	}) {
 		fmt.Printf("      <tr style=\"background-color:%s\">\n", stringToBackgroundColor(key.MCC+key.MNC+key.MVNOType+key.MVNOMatchData))
 		fmt.Printf("        <td>")
-		fmt.Printf("%s %s", html.EscapeString(key.MCC), html.EscapeString(key.MNC))
+		fmt.Printf("<b>%s %s", html.EscapeString(key.MCC), html.EscapeString(key.MNC))
 		if key.MVNOType != "" {
 			fmt.Printf(" %s=%s", html.EscapeString(key.MVNOType), html.EscapeString(key.MVNOMatchData))
 		}
+		fmt.Printf("</b>")
 		if carrierList.CarrierId != nil {
 			if i := slices.IndexFunc(carrierList.CarrierId, func(e *carrierid.CarrierId) bool {
 				return slices.ContainsFunc(e.CarrierAttribute, func(attr *carrierid.CarrierAttribute) bool {
@@ -166,7 +167,7 @@ func main() {
 			}
 		}
 		fmt.Printf("</td>\n")
-		fmt.Printf("        <td>%s</td>\n", html.EscapeString(key.Type))
+		fmt.Printf("        <td><b>%s</b></td>\n", html.EscapeString(key.Type))
 		for i, apn := range groupedAPNs[key] {
 			var isFallback bool
 			if apn == nil {
@@ -184,7 +185,7 @@ func main() {
 				fmt.Printf("        <td>")
 			}
 			if apn != nil {
-				fmt.Printf("<b>%s</b><br>", html.EscapeString(apn["apn"]))
+				fmt.Printf("<b>apn = %s</b><br>", html.EscapeString(apn["apn"]))
 				for _, attr := range apnAttrs {
 					if val, ok := apn[attr]; ok {
 						switch attr {
