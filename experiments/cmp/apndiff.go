@@ -240,6 +240,9 @@ func main() {
 						fmt.Printf("%s = %s<br>", html.EscapeString(attr), html.EscapeString(val))
 					}
 				}
+				if val, ok := apn["type_unsplit"]; ok && val != apn["type"] {
+					fmt.Printf("<i>orig type = %s</i><br>", html.EscapeString(val))
+				}
 				if isFallback {
 					fmt.Printf("<br><i>(fallback since no mvno-specific apn)</i>")
 				}
@@ -352,6 +355,7 @@ func readAPNs(name string, splitAPNTypes bool, filterMCC string) ([]APN, error) 
 				if splitAPNTypes {
 					for _, typ := range strings.Split(apn["type"], ",") {
 						tmp := maps.Clone(apn)
+						tmp["type_unsplit"] = apn["type"]
 						tmp["type"] = typ
 						apns = append(apns, tmp)
 					}
