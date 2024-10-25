@@ -131,32 +131,77 @@ func main() {
 					if !slices.Contains(attr.MccmncTuple, key.MCC+key.MNC) {
 						return false
 					}
-					if len(attr.ImsiPrefixXpattern) != 0 && (!strings.EqualFold(key.MVNOType, "imsi") || !slices.Contains(attr.ImsiPrefixXpattern, key.MVNOMatchData)) {
-						return false
+					var hasMVNOCond bool
+					if len(attr.ImsiPrefixXpattern) != 0 {
+						hasMVNOCond = true
+						if !strings.EqualFold(key.MVNOType, "imsi") || !containsStringFold(attr.ImsiPrefixXpattern, key.MVNOMatchData) {
+							return false
+						}
 					}
-					if len(attr.Spn) != 0 && (!strings.EqualFold(key.MVNOType, "spn") || !slices.Contains(attr.Spn, key.MVNOMatchData)) {
-						return false
+					if len(attr.Spn) != 0 {
+						hasMVNOCond = true
+						if !strings.EqualFold(key.MVNOType, "spn") || !containsStringFold(attr.Spn, key.MVNOMatchData) {
+							return false
+						}
 					}
 					if len(attr.Plmn) != 0 {
+						hasMVNOCond = true
 						return false // no xml representation
 					}
-					if len(attr.Gid1) != 0 && (!strings.EqualFold(key.MVNOType, "gid") || !slices.Contains(attr.Gid1, key.MVNOMatchData)) {
-						return false
+					if len(attr.Gid1) != 0 {
+						hasMVNOCond = true
+						if !strings.EqualFold(key.MVNOType, "gid") || !containsStringFold(attr.Gid1, key.MVNOMatchData) {
+							return false
+						}
 					}
 					if len(attr.Gid2) != 0 {
+						hasMVNOCond = true
 						return false // no xml representation
 					}
 					if len(attr.PreferredApn) != 0 {
+						hasMVNOCond = true
 						return false // no xml representation
 					}
-					if len(attr.IccidPrefix) != 0 && (!strings.EqualFold(key.MVNOType, "iccid") || !slices.Contains(attr.IccidPrefix, key.MVNOMatchData)) {
+					if len(attr.IccidPrefix) != 0 {
+						hasMVNOCond = true
+						if !strings.EqualFold(key.MVNOType, "iccid") || !containsStringFold(attr.IccidPrefix, key.MVNOMatchData) {
+							return false
+						}
+					}
+					if key.MVNOType != "" && !hasMVNOCond {
 						return false
 					}
 					return true
 				})
 			}); i != -1 {
 				cid := carrierList.CarrierId[i]
-				fmt.Printf("<br><br><span style=\"font-size:.75em\">matches carrier_list entry<br>")
+				fmt.Printf("<br><br><span style=\"font-size:.75em\">full carrier_list match<br>")
+				if cid.CarrierName != nil {
+					fmt.Printf("<i>%s</i>", *cid.CarrierName)
+				}
+				if cid.CanonicalId != nil {
+					fmt.Printf("<i> (%d)</i>", *cid.CanonicalId)
+				}
+				fmt.Printf("</span>")
+			} else if i := slices.IndexFunc(carrierList.CarrierId, func(e *carrierid.CarrierId) bool {
+				return slices.ContainsFunc(e.CarrierAttribute, func(attr *carrierid.CarrierAttribute) bool {
+					if slices.Contains(attr.MccmncTuple, key.MCC+key.MNC) {
+						switch key.MVNOType {
+						case "imsi":
+							return containsStringFold(attr.ImsiPrefixXpattern, key.MVNOMatchData)
+						case "spn":
+							return containsStringFold(attr.Spn, key.MVNOMatchData)
+						case "gid":
+							return containsStringFold(attr.Gid1, key.MVNOMatchData)
+						case "iccid":
+							return containsStringFold(attr.IccidPrefix, key.MVNOMatchData)
+						}
+					}
+					return false
+				})
+			}); i != -1 {
+				cid := carrierList.CarrierId[i]
+				fmt.Printf("<br><br><span style=\"font-size:.75em\">partial carrier_list match<br>") // because the apn xml isn't capable of having multiple mvno match conditions
 				if cid.CarrierName != nil {
 					fmt.Printf("<i>%s</i>", *cid.CarrierName)
 				}
@@ -206,6 +251,12 @@ func main() {
 	fmt.Println(`    </tbody>`)
 	fmt.Println(`  </table>`)
 	fmt.Println(`</body>`)
+}
+
+func containsStringFold(a []string, b string) bool {
+	return slices.ContainsFunc(a, func(x string) bool {
+		return strings.EqualFold(x, b)
+	})
 }
 
 func stringToBackgroundColor(str string) string {
