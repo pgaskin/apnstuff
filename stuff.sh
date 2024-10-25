@@ -53,6 +53,7 @@ adb shell "sed -i -E 's/(<string name=.ro_build_id.>)[^<]+(<.string>)/\1dummy\2/
 adb reboot
 
 # reset network settings in UI
+# also need to reset apn setting (via the three dot menu) specifically due to some lineage oddness, or old ones may get left behind
 
 # reboot
 adb reboot
