@@ -62,7 +62,9 @@ func main() {
 		MVNOType      string
 		MVNOMatchData string
 		Type          string
+		BearerBitmask string
 	}
+	var warnings bytes.Buffer
 	groupedAPNs := map[Key][]APN{} // [Key][file]
 	for i, apns := range fileAPNs {
 		for _, apn := range apns {
@@ -72,13 +74,18 @@ func main() {
 				MVNOType:      apn["mvno_type"],
 				MVNOMatchData: apn["mvno_match_data"],
 				Type:          apn["type"],
+				BearerBitmask: apn["bearer_bitmask"],
 			}
 			if _, ok := groupedAPNs[key]; !ok {
 				groupedAPNs[key] = make([]APN, len(files))
 			}
+			if groupedAPNs[key][i] != nil {
+				fmt.Fprintf(&warnings, "warning: possible apn conflict, ignoring the second one (file %q)\n  %v\n  %v\n", files[i], groupedAPNs[key][i], apn)
+			}
 			groupedAPNs[key][i] = apn
 		}
 	}
+	os.Stderr.Write(warnings.Bytes())
 
 	fallbackAPNs := map[Key][]APN{} // [Key][file]
 	for key := range groupedAPNs {
@@ -87,9 +94,10 @@ func main() {
 			if apn == nil {
 				// fall back to the non-mvno-specific match if no apn for the mvno
 				if m, ok := groupedAPNs[Key{
-					MCC:  key.MCC,
-					MNC:  key.MNC,
-					Type: key.Type,
+					MCC:           key.MCC,
+					MNC:           key.MNC,
+					Type:          key.Type,
+					BearerBitmask: key.BearerBitmask,
 				}]; ok {
 					fallbackAPNs[key][i] = m[i]
 				}
@@ -116,6 +124,7 @@ func main() {
 	fmt.Println(`  </style>`)
 	fmt.Println(`</head>`)
 	fmt.Println(`<body>`)
+	fmt.Printf("<pre>%s</pre>", html.EscapeString(warnings.String()))
 	fmt.Println(`  <table>`)
 	fmt.Println(`    <thead>`)
 	fmt.Println(`      <tr>`)
@@ -134,6 +143,7 @@ func main() {
 			cmp.Compare(k1.MVNOType, k2.MVNOType),
 			cmp.Compare(k1.MVNOMatchData, k2.MVNOMatchData),
 			cmp.Compare(k1.Type, k2.Type),
+			cmp.Compare(k1.BearerBitmask, k2.BearerBitmask),
 		)
 	}) {
 		fmt.Printf("      <tr style=\"background-color:%s\">\n", stringToBackgroundColor(key.MCC+key.MNC+key.MVNOType+key.MVNOMatchData))
@@ -230,7 +240,11 @@ func main() {
 			}
 		}
 		fmt.Printf("</td>\n")
-		fmt.Printf("        <td><b>%s</b></td>\n", html.EscapeString(key.Type))
+		fmt.Printf("        <td><b>%s</b>", html.EscapeString(key.Type))
+		if key.BearerBitmask != "" {
+			fmt.Printf("<br>bearer %s", html.EscapeString(key.BearerBitmask))
+		}
+		fmt.Printf("</td>\n")
 		for i, apn := range groupedAPNs[key] {
 			var isFallback bool
 			if isFallback = apn == nil; isFallback {

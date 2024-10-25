@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <table>
+<pre></pre>  <table>
     <thead>
       <tr>
         <th>Match</th>
@@ -121,14 +121,14 @@
       </tr>
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.koodo.com</b><br>carrier = Koodo SP<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2020<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>default,dun,ia,mms</b></td>
+        <td><b>default,dun,ia,mms</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = sp.koodo.com</b><br>carrier = Koodo SP<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2020<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -143,27 +143,34 @@
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Koodo IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 2020<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2020<br><span style="color: #900">user_visible = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2020<br>user_visible = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Koodo IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 2020<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e8f6fe">
+        <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 2020<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 2020<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f6fe">
         <td><b>302 220 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>xcap</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|20</td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br>carrier_id = 2020<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -184,7 +191,7 @@
       </tr>
       <tr style="background-color:#faeaf3">
         <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.mb.com</b><br>carrier = Mobile Internet<br>mmsc = http://aliasredirect.net/proxy/mb/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2089<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -213,13 +220,20 @@
       <tr style="background-color:#faeaf3">
         <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 2089<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2089<br><span style="color: #900">user_visible = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2089<br>user_visible = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#faeaf3">
         <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 2089<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#faeaf3">
+        <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.mb.com</b><br>carrier = Mobile Services<br>mmsc = http://aliasredirect.net/proxy/mb/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 2089<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -227,8 +241,15 @@
       <tr style="background-color:#faeaf3">
         <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = services.mb.com</b><br><span style="color: #900">carrier = XCAP<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span>carrier_id = 2089<br>user_visible = false<br></td>
-        <td><b>apn = services.mb.com</b><br><span style="color: #900">carrier = Mobile Services<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2089<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = services.mb.com</b><br>carrier = Mobile Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2089<br>user_visible = false<br>user_editable = false<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#faeaf3">
+        <td><b>302 220 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = services.mb.com</b><br>carrier = XCAP<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2089<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f9f3ff">
@@ -296,14 +317,14 @@
       </tr>
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.telus.com</b><br>carrier = TELUS SP<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>default,hipri,ia,mms,supl</b></td>
+        <td><b>default,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = sp.telus.com</b><br>carrier = TELUS SP<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1404<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -325,27 +346,34 @@
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = TELUS IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 1404<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 1404<br><span style="color: #900">user_editable = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = TELUS IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 1404<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e8f4e9">
+        <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 1404<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e8f4e9">
         <td><b>302 220 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>xcap</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|20</td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br>carrier_id = 1404<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -375,8 +403,15 @@
         <td><b>302 220 gid=6332</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2518)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e6ffed">
+        <td><b>302 220 gid=6332</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2518)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#e6ffed">
         <td><b>302 220 gid=6332</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2518)</i></span></td>
@@ -410,8 +445,15 @@
         <td><b>302 220 gid=6336</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2614)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#fffbe0">
+        <td><b>302 220 gid=6336</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2614)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#fffbe0">
         <td><b>302 220 gid=6336</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2614)</i></span></td>
@@ -445,8 +487,15 @@
         <td><b>302 220 gid=6530</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Home</i><i> (2517)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f8e2ee">
+        <td><b>302 220 gid=6530</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Home</i><i> (2517)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#f8e2ee">
         <td><b>302 220 gid=6530</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Home</i><i> (2517)</i></span></td>
@@ -480,8 +529,15 @@
         <td><b>302 220 gid=6538</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Project Genesis</i><i> (2528)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#eaeaf5">
+        <td><b>302 220 gid=6538</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Project Genesis</i><i> (2528)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#eaeaf5">
         <td><b>302 220 gid=6538</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Project Genesis</i><i> (2528)</i></span></td>
@@ -515,8 +571,15 @@
         <td><b>302 220 gid=6630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Republic</i><i> (2520)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e1fce8">
+        <td><b>302 220 gid=6630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Republic</i><i> (2520)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#e1fce8">
         <td><b>302 220 gid=6630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Republic</i><i> (2520)</i></span></td>
@@ -550,8 +613,15 @@
         <td><b>302 220 gid=6636</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Gen Mobile</i><i> (2619)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f4f9eb">
+        <td><b>302 220 gid=6636</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Gen Mobile</i><i> (2619)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#f4f9eb">
         <td><b>302 220 gid=6636</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Gen Mobile</i><i> (2619)</i></span></td>
@@ -585,8 +655,15 @@
         <td><b>302 220 gid=6638</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2621)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f3f4f3">
+        <td><b>302 220 gid=6638</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2621)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#f3f4f3">
         <td><b>302 220 gid=6638</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Boost</i><i> (2621)</i></span></td>
@@ -704,8 +781,15 @@
         <td><b>302 220 gid=7330</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ting</i><i> (2521)</i></span></td>
         <td><b>ims</b></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>mtu = 1430<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#eff9ff">
+        <td><b>302 220 gid=7330</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ting</i><i> (2521)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
       </tr>
       <tr style="background-color:#eff9ff">
         <td><b>302 220 gid=7330</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ting</i><i> (2521)</i></span></td>
@@ -744,7 +828,7 @@
       </tr>
       <tr style="background-color:#e0f7fa">
         <td><b>302 220 gid=8030</b></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
@@ -772,7 +856,7 @@
       </tr>
       <tr style="background-color:#e5f0e6">
         <td><b>302 220 gid=9030</b></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br></td>
@@ -835,14 +919,14 @@
       </tr>
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>default,dun,ia,mms</b></td>
+        <td><b>default,dun,ia,mms</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = sp.koodo.com</b><br>carrier = Koodo SP<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2020<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>default,dun,mms,supl</b></td>
+        <td><b>default,dun,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.koodo.com</b><br>carrier = Koodo<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2020<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -857,27 +941,34 @@
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Koodo IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 2020<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2020<br><span style="color: #900">user_visible = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2020<br>user_visible = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Koodo IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 2020<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f6f6f4">
+        <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 2020<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>mmsc = http://aliasredirect.net/proxy/koodo/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 2020<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f6f4">
         <td><b>302 221 gid=4B4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Koodo Mobile</i><i> (2020)</i></span></td>
-        <td><b>xcap</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|20</td>
         <td><b>apn = services.koodo.com</b><br>carrier = Koodo Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br>carrier_id = 2020<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -898,7 +989,7 @@
       </tr>
       <tr style="background-color:#e4eaf9">
         <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.mb.com</b><br>carrier = Mobile Internet<br>mmsc = http://aliasredirect.net/proxy/mb/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2089<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -927,13 +1018,20 @@
       <tr style="background-color:#e4eaf9">
         <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 2089<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2089<br><span style="color: #900">user_visible = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2089<br>user_visible = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e4eaf9">
         <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 2089<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e4eaf9">
+        <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.mb.com</b><br>carrier = Mobile Services<br>mmsc = http://aliasredirect.net/proxy/mb/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 2089<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -941,8 +1039,15 @@
       <tr style="background-color:#e4eaf9">
         <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = services.mb.com</b><br><span style="color: #900">carrier = XCAP<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span>carrier_id = 2089<br>user_visible = false<br></td>
-        <td><b>apn = services.mb.com</b><br><span style="color: #900">carrier = Mobile Services<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 2089<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = services.mb.com</b><br>carrier = Mobile Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 2089<br>user_visible = false<br>user_editable = false<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e4eaf9">
+        <td><b>302 221 gid=4D4F</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Public Mobile</i><i> (2089)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = services.mb.com</b><br>carrier = XCAP<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2089<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fce0e3">
@@ -1003,14 +1108,14 @@
       </tr>
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = sp.telus.com</b><br>carrier = TELUS<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>default,hipri,ia,mms,supl</b></td>
+        <td><b>default,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = sp.telus.com</b><br>carrier = TELUS SP<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1404<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1032,27 +1137,34 @@
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = TELUS IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 3|9|10|11|14|15|18|20<br></span>carrier_id = 1404<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span>protocol = IPV6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1440<br></span>carrier_id = 1404<br><span style="color: #900">user_editable = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>mtu = 1440<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 3|9|10|11|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = TELUS IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 3|9|10|11|14|15|18|20<br>carrier_id = 1404<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f6f4e3">
+        <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1440<br>carrier_id = 1404<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>mmsc = http://aliasredirect.net/proxy/mmsc<br>mmsproxy = mmscproxy.mobility.ca<br>mmsport = 8799<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 1404<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6f4e3">
         <td><b>302 221 gid=5455</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>TELUS Mobility</i><i> (1404)</i></span></td>
-        <td><b>xcap</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|20</td>
         <td><b>apn = services.telus.com</b><br>carrier = TELUS Services<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br>carrier_id = 1404<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1074,9 +1186,16 @@
       <tr style="background-color:#eafdfe">
         <td><b>302 270</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>EastLink</i><i> (2252)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 14|20<br></span><span style="color: #900">carrier_id = 2252<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Eastlink VoLTE<br></span>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1500<br></span><span style="color: #900">carrier_id = 2252<br></span><span style="color: #900">skip_464xlat = 1<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Eastlink VoLTE<br></span>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = Eastlink VoLTE<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1500<br></span><span style="color: #900">carrier_id = 2252<br></span><span style="color: #900">skip_464xlat = 1<br></span></td>
+        <td><b>apn = ims</b><br>carrier = Eastlink VoLTE<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span><span style="color: #900">user_visible = false<br></span></td>
+      </tr>
+      <tr style="background-color:#eafdfe">
+        <td><b>302 270</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>EastLink</i><i> (2252)</i></span></td>
+        <td><b>ims</b><br>bearer 14|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|20<br>carrier_id = 2252<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#eafdfe">
         <td><b>302 270</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>EastLink</i><i> (2252)</i></span></td>
@@ -1137,8 +1256,15 @@
       <tr style="background-color:#f8e3eb">
         <td><b>302 320</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 2055<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f8e3eb">
+        <td><b>302 320</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f8e3eb">
@@ -1151,8 +1277,15 @@
       <tr style="background-color:#f8e3eb">
         <td><b>302 320</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 2055<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span>protocol = IPV4V6<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>protocol = IPV4V6<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f8e3eb">
+        <td><b>302 320</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#ebf2fb">
@@ -1178,7 +1311,7 @@
       </tr>
       <tr style="background-color:#fdf7fc">
         <td><b>302 370</b></td>
-        <td><b>default,fota,hipri,ia,mms,supl</b></td>
+        <td><b>default,fota,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Fido Internet<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1962<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1207,13 +1340,20 @@
       <tr style="background-color:#fdf7fc">
         <td><b>302 370</b></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span>carrier_id = 1962<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Rogers IMS<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br>carrier_id = 1962<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = Rogers IMS<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>carrier_id = 1962<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fdf7fc">
         <td><b>302 370</b></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 1962<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#fdf7fc">
+        <td><b>302 370</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 1962<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1221,9 +1361,16 @@
       <tr style="background-color:#fdf7fc">
         <td><b>302 370</b></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 1962<br></span>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>authtype = 0<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>profile_id = 14<br>mtu = 1430<br>user_visible = false<br></td>
+      </tr>
+      <tr style="background-color:#fdf7fc">
+        <td><b>302 370</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1962<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e1eae0">
         <td><b>302 370 gid=2C</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>MTS Mobility</i><i> (578)</i></span></td>
@@ -1241,14 +1388,14 @@
       </tr>
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Fido Internet<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 1962<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
-        <td><b>default,fota,hipri,ia,mms,supl</b></td>
+        <td><b>default,fota,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Fido Internet<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1962<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1277,30 +1424,37 @@
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1962<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 1962<br></span></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 1962<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f2e1e1">
+        <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = netsvcs</b><br>carrier = Fido MMS<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 1962<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>mmsc = http://mms.fido.ca<br>mmsproxy = mmsproxy.fido.ca<br>mmsport = 80<br>protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 1962<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f2e1e1">
         <td><b>302 370 gid=DD</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Fido</i><i> (1962)</i></span></td>
-        <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 1962<br></span>user_visible = false<br></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1962<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fee1f3">
         <td><b>302 370 spn=MTS</b></td>
@@ -1347,9 +1501,16 @@
       <tr style="background-color:#f6ecf0">
         <td><b>302 490</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Freedom Mobile</i><i> (1895)</i></span></td>
         <td><b>ims</b></td>
-        <td><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 1895<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = VoLTE<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 1895<br></span><span style="color: #900">user_editable = false<br></span></td>
         <td><span style="color: #900"><b>apn = ims</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1280<br></span><span style="color: #900">user_visible = false<br></span></td>
+      </tr>
+      <tr style="background-color:#f6ecf0">
+        <td><b>302 490</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Freedom Mobile</i><i> (1895)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = IMS</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>carrier_id = 1895<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6ecf0">
         <td><b>302 490</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Freedom Mobile</i><i> (1895)</i></span></td>
@@ -1361,9 +1522,16 @@
       <tr style="background-color:#f6ecf0">
         <td><b>302 490</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Freedom Mobile</i><i> (1895)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = xcap.freedommobile.ca</b><br>carrier = XCAP<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 14|18<br></span><span style="color: #900">carrier_id = 1895<br></span>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = xcap.freedommobile.ca</b><br>carrier = XCAP<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span><span style="color: #900">mtu = 1300<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = xcap.freedommobile.ca</b><br>carrier = XCAP<br>protocol = IPV4V6<br>roaming_protocol = IP<br>mtu = 1300<br>user_visible = false<br></td>
+      </tr>
+      <tr style="background-color:#f6ecf0">
+        <td><b>302 490</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Freedom Mobile</i><i> (1895)</i></span></td>
+        <td><b>xcap</b><br>bearer 14|18</td>
+        <td><b>apn = xcap.freedommobile.ca</b><br>carrier = XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18<br>carrier_id = 1895<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fefffe">
         <td><b>302 490 gid=53</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Shaw Mobile</i><i> (2460)</i></span></td>
@@ -1389,9 +1557,16 @@
       <tr style="background-color:#fefffe">
         <td><b>302 490 gid=53</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Shaw Mobile</i><i> (2460)</i></span></td>
         <td><b>ims</b></td>
-        <td><span style="color: #900"><b>apn = IMS</b><br></span>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><span style="color: #900"><b>apn = IMS</b><br></span>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 2460<br></span><span style="color: #900">user_visible = 0<br></span><span style="color: #900">user_editable = false<br></span></td>
         <td style="opacity: 0.5"><span style="color: #900"><b>apn = ims</b><br></span>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1280<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+      </tr>
+      <tr style="background-color:#fefffe">
+        <td><b>302 490 gid=53</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Shaw Mobile</i><i> (2460)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = IMS</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fefffe">
         <td><b>302 490 gid=53</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Shaw Mobile</i><i> (2460)</i></span></td>
@@ -1423,10 +1598,10 @@
       </tr>
       <tr style="background-color:#e9f7f1">
         <td><b>302 490 imsi=302490400</b></td>
-        <td><b>ims</b></td>
-        <td><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td style="opacity: 0.5"><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = VoLTE<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 1895<br></span><span style="color: #900">user_editable = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td style="opacity: 0.5"><span style="color: #900"><b>apn = ims</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1280<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = IMS</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e9f7f1">
         <td><b>302 490 imsi=302490400</b></td>
@@ -1458,10 +1633,10 @@
       </tr>
       <tr style="background-color:#fefdf3">
         <td><b>302 490 imsi=302490500</b></td>
-        <td><b>ims</b></td>
-        <td><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td style="opacity: 0.5"><span style="color: #900"><b>apn = IMS</b><br></span><span style="color: #900">carrier = VoLTE<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 1895<br></span><span style="color: #900">user_editable = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td style="opacity: 0.5"><span style="color: #900"><b>apn = ims</b><br></span><span style="color: #900">carrier = IMS<br></span>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1280<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = IMS</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#fefdf3">
         <td><b>302 490 imsi=302490500</b></td>
@@ -1479,7 +1654,7 @@
       </tr>
       <tr style="background-color:#e8fdf0">
         <td><b>302 500</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = media.ng</b><br>carrier = Videotron Media<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2008<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1500,7 +1675,7 @@
       </tr>
       <tr style="background-color:#e8fdf0">
         <td><b>302 500</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = xcap</b><br>carrier = Videotron LTE XCAP<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 2008<br></td>
         <td style="opacity: 0.5"></td>
@@ -1515,20 +1690,34 @@
       <tr style="background-color:#f3faec">
         <td><b>302 500 gid=53</b></td>
         <td><b>default,mms,supl</b></td>
-        <td><b>apn = media.ng</b><br><span style="color: #900">carrier = Media<br></span>mmsc = http://media.videotron.com<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">user_editable = false<br></span></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = media.ng</b><br><span style="color: #900">carrier = Videotron<br></span>mmsc = http://media.videotron.com<br><span style="color: #900">authtype = 0<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = media.ng</b><br>carrier = Videotron<br>mmsc = http://media.videotron.com<br>authtype = 0<br></td>
+      </tr>
+      <tr style="background-color:#f3faec">
+        <td><b>302 500 gid=53</b></td>
+        <td><b>default,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = media.ng</b><br>carrier = Media<br>mmsc = http://media.videotron.com<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>user_editable = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f3faec">
         <td><b>302 500 gid=53</b></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = LTE IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">user_visible = false<br></span><span style="color: #900">user_editable = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Videotron LTE IMS<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 2008<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1460<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#f3faec">
         <td><b>302 500 gid=53</b></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = LTE IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br>user_editable = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f3faec">
+        <td><b>302 500 gid=53</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = xcap</b><br>carrier = MMS and XCAP over iWLAN<br>mmsc = http://media.videotron.com<br>bearer_bitmask = 18<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1536,13 +1725,20 @@
       <tr style="background-color:#f3faec">
         <td><b>302 500 gid=53</b></td>
         <td><b>xcap</b></td>
-        <td><b>apn = xcap</b><br><span style="color: #900">carrier = LTE XCAP<br></span><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br></span>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
-        <td><b>apn = xcap</b><br><span style="color: #900">carrier = XCAP<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1460<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = xcap</b><br>carrier = XCAP<br>authtype = 0<br>profile_id = 14<br>mtu = 1460<br>user_visible = false<br></td>
+      </tr>
+      <tr style="background-color:#f3faec">
+        <td><b>302 500 gid=53</b></td>
+        <td><b>xcap</b><br>bearer 1|2|3|9|10|11|13|14|15|20</td>
+        <td><b>apn = xcap</b><br>carrier = LTE XCAP<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6ffef">
         <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = mobile.bm</b><br>carrier = Fizz Media<br>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2417<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1564,16 +1760,30 @@
       <tr style="background-color:#e6ffef">
         <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = LTE IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 2417<br></span><span style="color: #900">user_visible = false<br></span><span style="color: #900">user_editable = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = Fizz LTE IMS<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 2417<br></span></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1460<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#e6ffef">
         <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = LTE IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 2417<br>user_visible = false<br>user_editable = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e6ffef">
+        <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
         <td><b>mms</b></td>
         <td style="opacity: 0.5"></td>
-        <td><span style="color: #900"><b>apn = xcap</b><br></span><span style="color: #900">carrier = Fizz LTE XCAP<br></span>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br><span style="color: #900">protocol = IP<br></span><span style="color: #900">roaming_protocol = IP<br></span><span style="color: #900">bearer_bitmask = 18<br></span><span style="color: #900">carrier_id = 2417<br></span></td>
-        <td><span style="color: #900"><b>apn = mobile.bm</b><br></span><span style="color: #900">carrier = Fizz MMS<br></span>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br><span style="color: #900">mtu = 1500<br></span></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = mobile.bm</b><br>carrier = Fizz MMS<br>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br>mtu = 1500<br></td>
+      </tr>
+      <tr style="background-color:#e6ffef">
+        <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = xcap</b><br>carrier = Fizz LTE XCAP<br>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 2417<br></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6ffef">
         <td><b>302 500 gid=55</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>FIZZ</i><i> (2417)</i></span></td>
@@ -1584,7 +1794,7 @@
       </tr>
       <tr style="background-color:#e9eceb">
         <td><b>302 510</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = media.ng</b><br>carrier = Videotron Media<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2008<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1605,7 +1815,7 @@
       </tr>
       <tr style="background-color:#e9eceb">
         <td><b>302 510</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = xcap</b><br>carrier = Videotron LTE XCAP<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 2008<br></td>
         <td style="opacity: 0.5"></td>
@@ -1633,7 +1843,7 @@
       </tr>
       <tr style="background-color:#f2f4f8">
         <td><b>302 510 gid=55</b></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = isp.bm</b><br>carrier = Fizz Media<br>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2417<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1647,14 +1857,14 @@
       </tr>
       <tr style="background-color:#f2f4f8">
         <td><b>302 510 gid=55</b></td>
-        <td><b>mms</b></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = xcap</b><br>carrier = Fizz LTE XCAP<br>mmsc = http://mms.mobile.bm<br>mmsproxy = mmsproxy.mobile.bm<br>mmsport = 80<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 2417<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#eaffe6">
         <td><b>302 520</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>agps,default,dun,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,dun,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = media.ng</b><br>carrier = Videotron Media<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 2008<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1675,7 +1885,7 @@
       </tr>
       <tr style="background-color:#eaffe6">
         <td><b>302 520</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Videotron</i><i> (2008)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = xcap</b><br>carrier = Videotron LTE XCAP<br>mmsc = http://media.videotron.com<br>protocol = IP<br>roaming_protocol = IP<br>bearer_bitmask = 18<br>carrier_id = 2008<br></td>
         <td style="opacity: 0.5"></td>
@@ -1703,14 +1913,14 @@
       </tr>
       <tr style="background-color:#f0f2ed">
         <td><b>302 610</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,dun,hipri,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell Mobility<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 576<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f0f2ed">
         <td><b>302 610</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,mms,supl,xcap</b></td>
+        <td><b>default,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell-Internet<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 576<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1725,13 +1935,20 @@
       <tr style="background-color:#f0f2ed">
         <td><b>302 610</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell Mobility IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span>carrier_id = 576<br><span style="color: #900">user_visible = false<br></span></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span>carrier_id = 576<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = ims</b><br>carrier = Bell ims<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>carrier_id = 576<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f0f2ed">
         <td><b>302 610</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Bell Mobility IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 576<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f0f2ed">
+        <td><b>302 610</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Mobility Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br></td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br><span style="color: #900">user_editable = 0<br></span></td>
         <td style="opacity: 0.5"></td>
@@ -1746,13 +1963,13 @@
       <tr style="background-color:#fdf5ef">
         <td><b>302 610 gid=3D</b></td>
         <td><b>ims</b></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Bell Mobility IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 576<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1500<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#ebe5e8">
         <td><b>302 610 gid=3E</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Virgin Mobile Canada</i><i> (2021)</i></span></td>
-        <td><b>default,dun,hipri,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Virgin Mobile<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2021<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1774,13 +1991,20 @@
       <tr style="background-color:#ebe5e8">
         <td><b>302 610 gid=3E</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Virgin Mobile Canada</i><i> (2021)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Virgin Mobile IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 2021<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1500<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#ebe5e8">
         <td><b>302 610 gid=3E</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Virgin Mobile Canada</i><i> (2021)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Virgin Mobile IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 2021<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#ebe5e8">
+        <td><b>302 610 gid=3E</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Virgin Mobile Canada</i><i> (2021)</i></span></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Virgin Mobile Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 2021<br></span><span style="color: #900">user_editable = false<br></span></td>
         <td style="opacity: 0.5"><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 576<br></span><span style="color: #900">user_visible = false<br></span><span style="color: #900">user_editable = 0<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td style="opacity: 0.5"></td>
@@ -1794,7 +2018,7 @@
       </tr>
       <tr style="background-color:#fff6e6">
         <td><b>302 610 gid=40</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>PC mobile</i><i> (2053)</i></span></td>
-        <td><b>default,dun,hipri,ia,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,ia,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = pda.bell.ca</b><br>carrier = PC Mobile<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 10005<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1816,13 +2040,20 @@
       <tr style="background-color:#fff6e6">
         <td><b>302 610 gid=40</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>PC mobile</i><i> (2053)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = PCMobile Mobility IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|20<br></span><span style="color: #900">carrier_id = 10005<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1500<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#fff6e6">
         <td><b>302 610 gid=40</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>PC mobile</i><i> (2053)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|20</td>
+        <td><b>apn = ims</b><br>carrier = PCMobile Mobility IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|20<br>carrier_id = 10005<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#fff6e6">
+        <td><b>302 610 gid=40</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>PC mobile</i><i> (2053)</i></span></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = PCMobile Mobility Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 10005<br></span>user_visible = false<br></td>
         <td style="opacity: 0.5"><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 576<br></span>user_visible = false<br><span style="color: #900">user_editable = 0<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td style="opacity: 0.5"></td>
@@ -1836,7 +2067,7 @@
       </tr>
       <tr style="background-color:#f3f7e8">
         <td><b>302 610 gid=42</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Lucky Mobile</i><i> (2122)</i></span></td>
-        <td><b>default,dun,hipri,ia,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,ia,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = connect</b><br>carrier = Lucky Mobile<br>mmsc = http://mms.luckymobile.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2122<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -1857,14 +2088,14 @@
       </tr>
       <tr style="background-color:#f3f7e8">
         <td><b>302 610 gid=42</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Lucky Mobile</i><i> (2122)</i></span></td>
-        <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Lucky Mobile IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|20<br></span><span style="color: #900">carrier_id = 2122<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>ims</b><br>bearer 14|20</td>
+        <td><b>apn = ims</b><br>carrier = Lucky Mobile IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|20<br>carrier_id = 2122<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f3f7e8">
         <td><b>302 610 gid=42</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Lucky Mobile</i><i> (2122)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Lucky Mobile Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 2122<br></span>user_visible = false<br></td>
         <td style="opacity: 0.5"><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br><span style="color: #900">carrier_id = 576<br></span>user_visible = false<br><span style="color: #900">user_editable = 0<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
         <td style="opacity: 0.5"></td>
@@ -1878,14 +2109,14 @@
       </tr>
       <tr style="background-color:#f2f0fb">
         <td><b>302 630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,dun,hipri,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell Mobility<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 576<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f2f0fb">
         <td><b>302 630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,mms,supl,xcap</b></td>
+        <td><b>default,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell-Internet<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 576<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1900,13 +2131,20 @@
       <tr style="background-color:#f2f0fb">
         <td><b>302 630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell Mobility IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 576<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1500<br></span></td>
       </tr>
       <tr style="background-color:#f2f0fb">
         <td><b>302 630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Bell Mobility IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 576<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f2f0fb">
+        <td><b>302 630</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Mobility Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br></td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br><span style="color: #900">user_editable = 0<br></span></td>
         <td style="opacity: 0.5"></td>
@@ -1920,14 +2158,14 @@
       </tr>
       <tr style="background-color:#f5e6fa">
         <td><b>302 640</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,dun,hipri,mms,supl,xcap</b></td>
+        <td><b>default,dun,hipri,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell Mobility<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 576<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f5e6fa">
         <td><b>302 640</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>default,mms,supl,xcap</b></td>
+        <td><b>default,mms,supl,xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = pda.bell.ca</b><br>carrier = Bell-Internet<br>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|20<br>carrier_id = 576<br>user_editable = 0<br></td>
         <td style="opacity: 0.5"></td>
@@ -1942,13 +2180,20 @@
       <tr style="background-color:#f5e6fa">
         <td><b>302 640</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell Mobility IMS<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 576<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = Bell ims<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">carrier_id = 576<br></span></td>
         <td><b>apn = ims</b><br><span style="color: #900">carrier = IMS<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">mtu = 1500<br></span></td>
       </tr>
       <tr style="background-color:#f5e6fa">
         <td><b>302 640</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = Bell Mobility IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 576<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#f5e6fa">
+        <td><b>302 640</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Bell Mobility</i><i> (576)</i></span></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Mobility Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br></td>
         <td><b>apn = apps.bell.ca</b><br><span style="color: #900">carrier = Bell Apps<br></span>mmsc = http://mms.bell.ca/mms/wapenc<br>protocol = IPV4V6<br><span style="color: #900">roaming_protocol = IP<br></span>bearer_bitmask = 18<br>carrier_id = 576<br>user_visible = false<br><span style="color: #900">user_editable = 0<br></span></td>
         <td style="opacity: 0.5"></td>
@@ -2011,7 +2256,7 @@
       </tr>
       <tr style="background-color:#eff9e8">
         <td><b>302 681</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Sask Tel Mobility</i><i> (580)</i></span></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2025,14 +2270,14 @@
       </tr>
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|19|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Rogers Internet<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|19|20<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
-        <td><b>default,hipri,ia,mms,supl</b></td>
+        <td><b>default,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Rogers Internet<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1403<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2060,7 +2305,7 @@
       </tr>
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
-        <td><b>epdg</b></td>
+        <td><b>epdg</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = netsvcs</b><br>carrier = Rogers EPDG<br>proxy = mmsproxy.rogers.com<br>port = 80<br>authtype = 0<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>mtu = 1430<br>user_visible = false<br></td>
@@ -2068,20 +2313,27 @@
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1403<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span></td>
       </tr>
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 1403<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e4ebe2">
+        <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = netsvcs</b><br>carrier = Rogers MMS<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 1403<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2089,13 +2341,20 @@
       <tr style="background-color:#e4ebe2">
         <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 1403<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br></td>
+      </tr>
+      <tr style="background-color:#e4ebe2">
+        <td><b>302 720</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers</i><i> (1403)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 1403<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6e5e1">
         <td><b>302 720 gid=A4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers 5G</i><i> (10025)</i></span></td>
-        <td><b>default,hipri,ia,mms,supl</b></td>
+        <td><b>default,hipri,ia,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = mobile.apn</b><br>carrier = Rogers Internet<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 10025<br>user_editable = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2109,35 +2368,35 @@
       </tr>
       <tr style="background-color:#f6e5e1">
         <td><b>302 720 gid=A4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers 5G</i><i> (10025)</i></span></td>
-        <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV6<br></span><span style="color: #900">bearer_bitmask = 14|18|20<br></span><span style="color: #900">carrier_id = 10025<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV6<br>roaming_protocol = IPV6<br>bearer_bitmask = 14|18|20<br>carrier_id = 10025<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6e5e1">
         <td><b>302 720 gid=A4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers 5G</i><i> (10025)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>carrier_id = 10025<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f6e5e1">
         <td><b>302 720 gid=A4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Rogers 5G</i><i> (10025)</i></span></td>
-        <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 10025<br></span>user_visible = false<br></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 10025<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
-        <td><b>agps,default,fota,hipri,mms,supl</b></td>
+        <td><b>agps,default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|19|20</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Tbaytel Internet<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IP<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|19|20<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
-        <td><b>default,fota,hipri,mms,supl</b></td>
+        <td><b>default,fota,hipri,mms,supl</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
         <td><b>apn = ltemobile.apn</b><br>carrier = Tbaytel Internet<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2166,20 +2425,27 @@
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
-        <td><b>mms</b></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e6f3e3">
+        <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
+        <td><b>mms</b><br>bearer 18</td>
         <td style="opacity: 0.5"></td>
         <td><b>apn = netsvcs</b><br>carrier = Tbaytel MMS<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
-        <td><b>mms,xcap</b></td>
+        <td><b>mms,xcap</b><br>bearer 18</td>
         <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br>mmsc = http://mms.gprs.rogers.com<br>mmsproxy = mmsproxy.rogers.com<br>mmsport = 80<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 18<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2187,9 +2453,16 @@
       <tr style="background-color:#e6f3e3">
         <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br>user_visible = false<br><span style="color: #900">user_editable = false<br></span></td>
+        <td style="opacity: 0.5"><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+      </tr>
+      <tr style="background-color:#e6f3e3">
+        <td><b>302 720 gid=BA</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Tbaytel</i><i> (2090)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#ebe3f6">
         <td><b>302 720 gid=CC</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Cityfone</i><i> (2057)</i></span></td>
@@ -2214,10 +2487,10 @@
       </tr>
       <tr style="background-color:#ebe3f6">
         <td><b>302 720 gid=CC</b><br><br><span style="font-size:.75em">partial carrier_list match<br><i>Cityfone</i><i> (2057)</i></span></td>
-        <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">user_visible = false<br></span></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e6f4f5">
         <td><b>302 720 gid=D2</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
@@ -2243,16 +2516,30 @@
       <tr style="background-color:#e6f4f5">
         <td><b>302 720 gid=D2</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 2055<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#e6f4f5">
         <td><b>302 720 gid=D2</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#e6f4f5">
+        <td><b>302 720 gid=D2</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 2055<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+      </tr>
+      <tr style="background-color:#e6f4f5">
+        <td><b>302 720 gid=D2</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#f3f1f6">
         <td><b>302 720 gid=D4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ztar Mobile</i><i> (2056)</i></span></td>
@@ -2278,7 +2565,7 @@
       <tr style="background-color:#f3f1f6">
         <td><b>302 720 gid=D4</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ztar Mobile</i><i> (2056)</i></span></td>
         <td><b>ims</b></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1403<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 2056<br></span></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
@@ -2299,16 +2586,16 @@
       <tr style="background-color:#ece9f9">
         <td><b>302 720 imsi=302720x83</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>ims</b></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1403<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#ece9f9">
         <td><b>302 720 imsi=302720x83</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>xcap</b></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 1403<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#effcfd">
         <td><b>302 720 imsi=302720x84</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
@@ -2334,16 +2621,30 @@
       <tr style="background-color:#effcfd">
         <td><b>302 720 imsi=302720x84</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 2055<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#effcfd">
         <td><b>302 720 imsi=302720x84</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#effcfd">
+        <td><b>302 720 imsi=302720x84</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 2055<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+      </tr>
+      <tr style="background-color:#effcfd">
+        <td><b>302 720 imsi=302720x84</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#eeede6">
         <td><b>302 720 imsi=302720x94</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
@@ -2369,16 +2670,30 @@
       <tr style="background-color:#eeede6">
         <td><b>302 720 imsi=302720x94</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>ims</b></td>
-        <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 2055<br></span><span style="color: #900">user_visible = false<br></span></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
       <tr style="background-color:#eeede6">
         <td><b>302 720 imsi=302720x94</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>ims</b><br>bearer 1|2|3|9|10|11|13|14|15|18|20</td>
+        <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
+      </tr>
+      <tr style="background-color:#eeede6">
+        <td><b>302 720 imsi=302720x94</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
         <td><b>xcap</b></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs XCAP<br></span><span style="color: #900">protocol = IPV4V6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br></span><span style="color: #900">carrier_id = 2055<br></span>user_visible = false<br></td>
-        <td><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
-        <td style="opacity: 0.5"><b>apn = netsvcs</b><br><span style="color: #900">carrier = Netsvcs<br></span><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">protocol = IPV4V6<br></span>user_visible = false<br></td>
+        <td style="opacity: 0.5"><b>apn = netsvcs</b><br>carrier = Netsvcs<br><span style="color: #900">authtype = 0<br></span><span style="color: #900">protocol = IPV6<br></span><span style="color: #900">roaming_protocol = IPV4V6<br></span><span style="color: #900">profile_id = 14<br></span><span style="color: #900">mtu = 1430<br></span>user_visible = false<br><br><i>(fallback since no mvno-specific apn)</i></td>
+      </tr>
+      <tr style="background-color:#eeede6">
+        <td><b>302 720 imsi=302720x94</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Chatr Mobile</i><i> (2055)</i></span></td>
+        <td><b>xcap</b><br>bearer 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20</td>
+        <td><b>apn = netsvcs</b><br>carrier = Netsvcs XCAP<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20<br>carrier_id = 2055<br>user_visible = false<br></td>
+        <td style="opacity: 0.5"></td>
+        <td style="opacity: 0.5"></td>
       </tr>
       <tr style="background-color:#e5e1f0">
         <td><b>302 720 imsi=302720x98</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ztar Mobile</i><i> (2056)</i></span></td>
@@ -2404,7 +2719,7 @@
       <tr style="background-color:#e5e1f0">
         <td><b>302 720 imsi=302720x98</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Ztar Mobile</i><i> (2056)</i></span></td>
         <td><b>ims</b></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1403<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 2056<br></span></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
@@ -2432,7 +2747,7 @@
       <tr style="background-color:#e2f7e9">
         <td><b>302 720 spn=CITYFONE</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Cityfone</i><i> (2057)</i></span></td>
         <td><b>ims</b></td>
-        <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">bearer_bitmask = 1|2|3|9|10|11|13|14|15|18|20<br></span><span style="color: #900">carrier_id = 1403<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
+        <td style="opacity: 0.5"></td>
         <td><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">carrier_id = 2057<br></span></td>
         <td style="opacity: 0.5"><b>apn = ims</b><br>carrier = IMS<br><span style="color: #900">protocol = IPV4V6<br></span>roaming_protocol = IPV4V6<br><span style="color: #900">mtu = 1430<br></span><span style="color: #900">user_visible = false<br></span><br><i>(fallback since no mvno-specific apn)</i></td>
       </tr>
@@ -2459,7 +2774,7 @@
       </tr>
       <tr style="background-color:#f9e3ed">
         <td><b>302 780 gid=5A</b></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2473,7 +2788,7 @@
       </tr>
       <tr style="background-color:#e3f2e4">
         <td><b>302 780 gid=5B</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Lum</i><i> (2638)</i></span></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
@@ -2487,7 +2802,7 @@
       </tr>
       <tr style="background-color:#f8f3ea">
         <td><b>302 781</b><br><br><span style="font-size:.75em">full carrier_list match<br><i>Sask Tel Mobility</i><i> (580)</i></span></td>
-        <td><b>ims</b></td>
+        <td><b>ims</b><br>bearer 14|18|20</td>
         <td><b>apn = ims</b><br>carrier = IMS<br>protocol = IPV4V6<br>roaming_protocol = IPV4V6<br>bearer_bitmask = 14|18|20<br>user_visible = false<br></td>
         <td style="opacity: 0.5"></td>
         <td style="opacity: 0.5"></td>
