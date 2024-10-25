@@ -112,7 +112,7 @@ func main() {
 	fmt.Println(`    th { vertical-align: middle; text-align: left; }`)
 	fmt.Println(`    td { vertical-align: top; }`)
 	fmt.Println(`    td:nth-child(1) { white-space: nowrap; }`)
-	fmt.Println(`    td:nth-child(3) { border-right: 1px solid #ccc; }`)
+	fmt.Println(`    td:nth-child(2) { border-right: 1px solid #ccc; }`)
 	fmt.Println(`  </style>`)
 	fmt.Println(`</head>`)
 	fmt.Println(`<body>`)
