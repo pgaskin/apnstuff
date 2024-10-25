@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apns version="8">
+  <!--
+    APNs for Canadian carriers
+    Compiled by Patrick Gaskin using a combination of data from:
+    - Pixel shiba_AP2A.240905.003 carriersettings
+    - Samsung S24 (S921W) S921WVLS3AXI1/S921USQS3AXI1/MQB86303474 apns-conf
+    - Motorola Edge 2024 (XT2045-1) XT2405-1_AVATRN_RETCA_14_U2UANS34.72-43-1-3_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC apns-conf
+    - Patches to device/sample apns-conf in AOSP code review
+    - Carrier websites
+    - AOSP carrier_list.pb for confirming carrier_id matches (it's actually up-to-date unlike the APNs)
+  -->
+
+  <!--
+    Xplore (https://www.xplore.ca/) - 302130
+    - based on motorola APNs (goog/sam don't have it)
+    - added carrier_id since there's an exact match
+  -->
+  <apn carrier="Xplore Mobility" carrier_id="2435" mcc="302" mnc="130" apn="internet.xploremobile.com" type="default,mms,dun" mmsc="http://mmsc.xploremobile.com" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="0" mtu="1430"/>
+  <apn carrier="Xplore IMS" carrier_id="2435" mcc="302" mnc="130" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="0" mtu="1430"/>
+  <apn carrier="Xplore SOS" carrier_id="2435" mcc="302" mnc="130" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="0" user_visible="0" mtu="1430"/>
+  <apn carrier="Xplore XCAP" carrier_id="2435" mcc="302" mnc="130" apn="xcap.xploremobile.com" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="0" mtu="1430"/>
+
+  <!--
+    Cogeco (https://corpo.cogeco.com/cgo/en/press-room/press-releases/cogeco-announces-strategic-partnerships-national-wireless-network-operator-and-eastlink-launch-mobility-services-canada/) - 302150/302151
+    - based on motorola APNs (goog/sam don't have it)
+    - not generally available yet
+    - renamed
+  -->
+  <apn carrier="Cogeco" mcc="302" mnc="150" apn="data.cogecomobile.ca" type="default,mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco" mcc="302" mnc="151" apn="data.cogecomobile.ca" type="default,mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco IMS" mcc="302" mnc="150" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco IMS" mcc="302" mnc="151" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco SOS" mcc="302" mnc="150" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco SOS" mcc="302" mnc="151" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+
+  <!--
+    TELUS - Koodo (https://www.koodomobile.com) - 302220/302221 gid=4B4F
+    - based on google APNs
+    - note that Samsung uses just "4B" as the prefix, but google, aosp, and the carrier_list uses 4B4F, so I'm going with that
+    - https://www.koodomobile.com/en/help/setting-data-your-non-koodo-phone has some of the APNs
+    - renamed
+    - sp.koodo.com type dun removed, supl added (https://android-review.googlesource.com/c/device/sample/+/3191311)
+    - sp.koodo.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191370)
+    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3191370)
+  -->
+  <apn carrier="Koodo" carrier_id="2020" mcc="302" mnc="220" apn="sp.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
+  <apn carrier="Koodo" carrier_id="2020" mcc="302" mnc="221" apn="sp.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
+  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo SOS" carrier_id="2020" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo SOS" carrier_id="2020" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo Services" carrier_id="2020" mcc="302" mnc="220" apn="services.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
+  <apn carrier="Koodo Services" carrier_id="2020" mcc="302" mnc="221" apn="services.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
+  <apn carrier="Koodo Services" carrier_id="2020" mcc="302" mnc="220" apn="services.koodo.com" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo Services" carrier_id="2020" mcc="302" mnc="221" apn="services.koodo.com" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+
+  <!--
+    TELUS - Public Mobile (https://www.publicmobile.ca) - 302220/302221 gid=4D4F
+    - based on google APNs
+    - https://www.publicmobile.ca/en/on/get-help/articles/set-up-data-on-an-android-phone
+    - renamed
+    - isp.mb.com protocol+roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191510)
+    - sp.mb.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191510)
+    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3191510)
+  -->
+  <apn carrier="Public Mobile" carrier_id="2089" mcc="302" mnc="220" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
+  <apn carrier="Public Mobile" carrier_id="2089" mcc="302" mnc="221" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
+  <apn carrier="Public Mobile Tethered" carrier_id="2089" mcc="302" mnc="220" apn="isp.mb.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
+  <apn carrier="Public Mobile Tethered" carrier_id="2089" mcc="302" mnc="221" apn="isp.mb.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
+  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile SOS" carrier_id="2089" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile SOS" carrier_id="2089" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile XCAP" carrier_id="2089" mcc="302" mnc="220" apn="services.mb.com" type="xcap" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile XCAP" carrier_id="2089" mcc="302" mnc="221" apn="services.mb.com" type="xcap" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+
+  <!--
+    TELUS - PC Mobile (https://www.pcmobile.ca/en/) - 302220/302221 gid=5043
+    - based on google APNs
+    - https://www.pcmobile.ca/en/help/sim-card-and-phone-support/APN-settings/
+    - renamed
+    - https://www.reddit.com/r/bell/comments/1cv8jf2/does_pc_mobile_really_have_volte/ says no volte on the pixel 8 as of 2024-05, which checks out given that ims/xcap isn't in the apns for it
+    - motorola and samsung don't have ims/xcap for it (or for generic 302220/302221 either)
+    - https://www.cellphones.ca/cell-plans/carriers/pc-mobile/ also says volte not supported
+  -->
+  <apn carrier="PC Mobile" carrier_id="10006" mcc="302" mnc="220" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" mvno_type="gid" mvno_match_data="5043" user_editable="false"/>
+  <apn carrier="PC Mobile" carrier_id="10006" mcc="302" mnc="221" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" mvno_type="gid" mvno_match_data="5043" user_editable="false"/>
+  <apn carrier="PC Mobile Tethered" carrier_id="10006" mcc="302" mnc="220" apn="isp.mb.com" type="dun" mvno_type="gid" mvno_match_data="5043" user_editable="false"/>
+  <apn carrier="PC Mobile Tethered" carrier_id="10006" mcc="302" mnc="221" apn="isp.mb.com" type="dun" mvno_type="gid" mvno_match_data="5043" user_editable="false"/>
+
+  <!--
+    TELUS - 302220/302221 gid=5455
+    - based on google APNs
+    - note that Samsung uses just "54" as the prefix, but google, aosp, and the carrier_list uses 5455, so I'm going with that
+    - https://www.telus.com/en/support/article/activate-data-on-your-android-device
+    - renamed
+    - isp.telus.com protocol+roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3185999)
+    - sp.telus.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3185999)
+    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3185999)
+  -->
+  <apn carrier="TELUS" carrier_id="1404" mcc="302" mnc="220" apn="sp.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS" carrier_id="1404" mcc="302" mnc="221" apn="sp.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS Tethered" carrier_id="1404" mcc="302" mnc="220" apn="isp.telus.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS Tethered" carrier_id="1404" mcc="302" mnc="221" apn="isp.telus.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS SOS" carrier_id="1404" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS SOS" carrier_id="1404" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS Services" carrier_id="1404" mcc="302" mnc="220" apn="services.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS Services" carrier_id="1404" mcc="302" mnc="221" apn="services.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
+  <apn carrier="TELUS Services" carrier_id="1404" mcc="302" mnc="220" apn="services.telus.com" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS Services" carrier_id="1404" mcc="302" mnc="221" apn="services.telus.com" type="xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+
+  <!--
+    skipped a bunch of seemingly TELUS MVNOs which don't exist afaik other than as APN entries on samsung and motorola, and as entries in carrier_list
+    the odd thing about them is most have an xcap apn with a mmsc of mms.mnc340.mcc313.pub.3gppnetwork.org... and 340313 is Dish in the US
+    I can't find anything on Google about Dish having any kind of relationship with TELUS
+    also, for Boost, https://www.reddit.com/r/BoostMobile/comments/x0qz8k/going_to_canada_in_2_weeks/ claims they have no coverage at all in Canada
+    for Ting, I found https://www.cbc.ca/news/business/the-canadian-mobile-phone-service-you-can-t-get-here-1.1337824
+    none of these are in aosp, lineage, or google currently
+    - 302 220 gid=6332 Boost (2518)
+    - 302 220 gid=6336 Boost (2614)
+    - 302 220 gid=6530 Home (2517)
+    - 302 220 gid=6538 Project Genesis (2528)
+    - 302 220 gid=6630 Republic (2520)
+    - 302 220 gid=6636 Gen Mobile (2619)
+    - 302 220 gid=6638 Boost (2621)
+    - 302 220 gid=6732 Boost (2613)
+    - 302 220 gid=6736 Boost (2615)
+    - 302 220 gid=6738 Project Genesis (2616)
+    - 302 220 gid=6830 Republic (2617)
+    - 302 220 gid=6836 Gen Mobile (2620)
+    - 302 220 gid=6838 Boost (2622)
+    - 302 220 gid=7330 Ting (2521)
+    - 302 220 gid=7530 Ting (2618)
+    - 302 220 gid=8030 (unknown, no match in carrier_list)
+    - 302 220 gid=9030 (unknown, no match in carrier_list)
+  -->
+
+  <!-- skipped 302 220 spn=WOM (only motorola has it) -->
+</apns>
