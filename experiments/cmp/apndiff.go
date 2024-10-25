@@ -25,6 +25,7 @@ import (
 // go run . 0 google.xml motorola.xml samsung.xml > mcc302-good.html
 // go run . 1 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.split.html
 // go run . 1 google.xml motorola.xml samsung.xml > mcc302-good.split.html
+// env -C tmp go run .. 1 lineage_orig.xml lineage_cl_406557_1.xml aosp.xml google.xml > tmp/tmp.html
 
 func main() {
 	splitAPNTypes, err := strconv.ParseBool(os.Args[1])
@@ -76,6 +77,23 @@ func main() {
 				groupedAPNs[key] = make([]APN, len(files))
 			}
 			groupedAPNs[key][i] = apn
+		}
+	}
+
+	fallbackAPNs := map[Key][]APN{} // [Key][file]
+	for key := range groupedAPNs {
+		fallbackAPNs[key] = make([]APN, len(files))
+		for i, apn := range groupedAPNs[key] {
+			if apn == nil {
+				// fall back to the non-mvno-specific match if no apn for the mvno
+				if m, ok := groupedAPNs[Key{
+					MCC:  key.MCC,
+					MNC:  key.MNC,
+					Type: key.Type,
+				}]; ok {
+					fallbackAPNs[key][i] = m[i]
+				}
+			}
 		}
 	}
 
@@ -215,14 +233,8 @@ func main() {
 		fmt.Printf("        <td><b>%s</b></td>\n", html.EscapeString(key.Type))
 		for i, apn := range groupedAPNs[key] {
 			var isFallback bool
-			if apn == nil {
-				// fall back to the non-mvno-specific match if no apn for the mvno
-				isFallback = true
-				key.MVNOMatchData = ""
-				key.MVNOType = ""
-				if m, ok := groupedAPNs[key]; ok {
-					apn = m[i]
-				}
+			if isFallback = apn == nil; isFallback {
+				apn = fallbackAPNs[key][i]
 			}
 			if isFallback {
 				fmt.Printf("        <td style=\"opacity: 0.5\">")
@@ -230,14 +242,38 @@ func main() {
 				fmt.Printf("        <td>")
 			}
 			if apn != nil {
-				fmt.Printf("<b>apn = %s</b><br>", html.EscapeString(apn["apn"]))
+				{
+					different := slices.ContainsFunc(groupedAPNs[key], func(x APN) bool {
+						return x != nil && x["apn"] != apn["apn"]
+					}) || slices.ContainsFunc(fallbackAPNs[key], func(x APN) bool {
+						return x != nil && x["apn"] != apn["apn"]
+					})
+					if different {
+						fmt.Printf("<span style=\"color: #900\">")
+					}
+					fmt.Printf("<b>apn = %s</b><br>", html.EscapeString(apn["apn"]))
+					if different {
+						fmt.Printf("</span>")
+					}
+				}
 				for _, attr := range apnAttrs {
 					if val, ok := apn[attr]; ok {
 						switch attr {
 						case "mcc", "mnc", "mvno_type", "mvno_match_data", "type", "apn":
 							continue // already grouped by these
 						}
+						different := slices.ContainsFunc(groupedAPNs[key], func(x APN) bool {
+							return x != nil && x[attr] != val
+						}) || slices.ContainsFunc(fallbackAPNs[key], func(x APN) bool {
+							return x != nil && x[attr] != val
+						})
+						if different {
+							fmt.Printf("<span style=\"color: #900\">")
+						}
 						fmt.Printf("%s = %s<br>", html.EscapeString(attr), html.EscapeString(val))
+						if different {
+							fmt.Printf("</span>")
+						}
 					}
 				}
 				if val, ok := apn["type_unsplit"]; ok && val != apn["type"] {
