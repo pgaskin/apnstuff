@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"cmp"
 	"encoding/xml"
+	"errors"
 	"fmt"
 	"hash/crc32"
 	"html"
@@ -13,12 +14,17 @@ import (
 	"slices"
 	"strconv"
 	"strings"
+
+	"github.com/pgaskin/apnstuff/carriersettings/experiments/cmp/android14-qpr3-release/carrierid"
+	"google.golang.org/protobuf/proto"
 )
 
-// go run apndiff.go 0 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.html
-// go run apndiff.go 0 google.xml motorola.xml samsung.xml > mcc302-good.html
-// go run apndiff.go 1 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.split.html
-// go run apndiff.go 1 google.xml motorola.xml samsung.xml > mcc302-good.split.html
+// curl https://android.googlesource.com/platform/packages/providers/TelephonyProvider/+/master/assets/latest_carrier_id/carrier_list.pb?format=TEXT | base64 -d > carrier_list.pb
+
+// go run . 0 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.html
+// go run . 0 google.xml motorola.xml samsung.xml > mcc302-good.html
+// go run . 1 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.split.html
+// go run . 1 google.xml motorola.xml samsung.xml > mcc302-good.split.html
 
 func main() {
 	splitAPNTypes, err := strconv.ParseBool(os.Args[1])
@@ -36,6 +42,17 @@ func main() {
 			panic(fmt.Errorf("%s: %w", name, err))
 		}
 		fileAPNs[i] = apns
+	}
+
+	var carrierList carrierid.CarrierList
+	{
+		if buf, err := os.ReadFile("carrier_list.pb"); err != nil {
+			if !errors.Is(err, os.ErrNotExist) {
+				panic(err)
+			}
+		} else if err := proto.Unmarshal(buf, &carrierList); err != nil {
+			panic(err)
+		}
 	}
 
 	type Key struct {
@@ -69,14 +86,15 @@ func main() {
 	fmt.Println(`  <title>APN Diff</title>`)
 	fmt.Println(`  <style>`)
 	fmt.Println(`    html { font-size: 16px; }`)
-	fmt.Println(`    body { font-family: sans-serif; font-size: 0.875rem; }`)
+	fmt.Println(`    body { font-family: sans-serif; font-size: 0.75rem; }`)
 	fmt.Println(`    table { border-collapse: collapse; border: 1px solid #ccc; }`)
 	fmt.Println(`    thead { position: sticky; top: 0; background: #eee; }`)
 	fmt.Println(`    tr { border-bottom: 1px solid #ccc; }`)
 	fmt.Println(`    th, td { padding: .25rem .5em; }`)
 	fmt.Println(`    th { vertical-align: middle; text-align: left; }`)
 	fmt.Println(`    td { vertical-align: top; }`)
-	fmt.Println(`    td:nth-child(2) { border-right: 1px solid #ccc; }`)
+	fmt.Println(`    td:nth-child(1) { white-space: nowrap; }`)
+	fmt.Println(`    td:nth-child(3) { border-right: 1px solid #ccc; }`)
 	fmt.Println(`  </style>`)
 	fmt.Println(`</head>`)
 	fmt.Println(`<body>`)
@@ -97,6 +115,7 @@ func main() {
 			cmp.Compare(k1.MNC, k2.MNC),
 			cmp.Compare(k1.MVNOType, k2.MVNOType),
 			cmp.Compare(k1.MVNOMatchData, k2.MVNOMatchData),
+			cmp.Compare(k1.Type, k2.Type),
 		)
 	}) {
 		fmt.Printf("      <tr style=\"background-color:%s\">\n", stringToBackgroundColor(key.MCC+key.MNC+key.MVNOType+key.MVNOMatchData))
@@ -104,6 +123,47 @@ func main() {
 		fmt.Printf("%s %s", html.EscapeString(key.MCC), html.EscapeString(key.MNC))
 		if key.MVNOType != "" {
 			fmt.Printf(" %s=%s", html.EscapeString(key.MVNOType), html.EscapeString(key.MVNOMatchData))
+		}
+		if carrierList.CarrierId != nil {
+			if i := slices.IndexFunc(carrierList.CarrierId, func(e *carrierid.CarrierId) bool {
+				return slices.ContainsFunc(e.CarrierAttribute, func(attr *carrierid.CarrierAttribute) bool {
+					if !slices.Contains(attr.MccmncTuple, key.MCC+key.MNC) {
+						return false
+					}
+					if len(attr.ImsiPrefixXpattern) != 0 && (!strings.EqualFold(key.MVNOType, "imsi") || !slices.Contains(attr.ImsiPrefixXpattern, key.MVNOMatchData)) {
+						return false
+					}
+					if len(attr.Spn) != 0 && (!strings.EqualFold(key.MVNOType, "spn") || !slices.Contains(attr.Spn, key.MVNOMatchData)) {
+						return false
+					}
+					if len(attr.Plmn) != 0 {
+						return false // no xml representation
+					}
+					if len(attr.Gid1) != 0 && (!strings.EqualFold(key.MVNOType, "gid") || !slices.Contains(attr.Gid1, key.MVNOMatchData)) {
+						return false
+					}
+					if len(attr.Gid2) != 0 {
+						return false // no xml representation
+					}
+					if len(attr.PreferredApn) != 0 {
+						return false // no xml representation
+					}
+					if len(attr.IccidPrefix) != 0 && (!strings.EqualFold(key.MVNOType, "iccid") || !slices.Contains(attr.IccidPrefix, key.MVNOMatchData)) {
+						return false
+					}
+					return true
+				})
+			}); i != -1 {
+				cid := carrierList.CarrierId[i]
+				fmt.Printf("<br><br><span style=\"font-size:.75em\">matches carrier_list entry<br>")
+				if cid.CarrierName != nil {
+					fmt.Printf("<i>%s</i>", *cid.CarrierName)
+				}
+				if cid.CanonicalId != nil {
+					fmt.Printf("<i> (%d)</i>", *cid.CanonicalId)
+				}
+				fmt.Printf("</span>")
+			}
 		}
 		fmt.Printf("</td>\n")
 		fmt.Printf("        <td>%s</td>\n", html.EscapeString(key.Type))
