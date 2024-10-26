@@ -16,6 +16,11 @@
   -->
 
   <!--
+    To sort these lines in AOSP order (mcc, then mnc, then mvno):
+    cat mcc302.xml | xmllint \-\-format - | grep -E '^  <apn' | sed -E 's/^/?/g' | sed -E 's/^(.+mvno_match_data="([^"]+)" .+)$/\2 \1/g' | sed -E 's/^(.+mvno_type="([^"]+)" .+)$/\2 \1/g' | sed -E 's/^(.+mnc="([^"]+)" .+)$/\2 \1/g' | sed -E 's/^(.+mcc="([^"]+)" .+)$/\2 \1/g' | sort -n | cut -d'?' -f2-
+  -->
+
+  <!--
     Xplore (https://www.xplore.ca/) - 302130
     - based on motorola APNs (goog/sam don't have it)
     - added carrier_id since there's an exact match
