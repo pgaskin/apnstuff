@@ -9,6 +9,9 @@
     - Patches to device/sample apns-conf in AOSP code review
     - Carrier websites
     - AOSP carrier_list.pb for confirming carrier_id matches (it's actually up-to-date unlike the APNs)
+    - google's are generally the best, but motorola has some of the more niche ones
+    - motorola ones tend to be a bit more messy; they default to always putting fields even when not necessary
+    - samsung is good when trying to figure out whether to believe motorola or google if both say different things
   -->
 
   <!--
@@ -250,5 +253,85 @@
   <apn carrier="Fizz IMS" carrier_id="2417" mcc="302" mnc="500" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
   <apn carrier="Fizz XCAP" carrier_id="2417" mcc="302" mnc="500" apn="xcap" type="xcap" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
 
-  <!-- TODO: 302610 onwards -->
+  <!--
+    Bell Mobility (https://www.bell.ca/) - 302610/302630/302640
+    - based on google's APNs
+    - renamed
+    - pretty uncontroversial and consistent between google/motorola/samsung, but google's is the cleanest
+    - changed IMS protocol/roaming_protocol to IPV4V6 to match current aosp and other canadian carriers
+  -->
+  <apn carrier="Bell Mobility" carrier_id="576" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
+  <apn carrier="Bell Mobility" carrier_id="576" mcc="302" mnc="630" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
+  <apn carrier="Bell Mobility" carrier_id="576" mcc="302" mnc="640" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
+  <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
+  <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
+  <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
+  <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
+  <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
+
+  <!--
+    Bell - Virgin Mobile (https://www.virginplus.ca) - 302610/302630/302640 gid=3E
+    - similar to bell, same thing about ims
+    - google's apns don't have stuff for 302630/302640, but this is definitely part of it since it matches in the latest aosp carrier_list, so I added them (it probably works fine without it since it'll just fall back to bell's, which are the same, but let's just keep things consistent)
+  -->
+  <apn carrier="Virgin Mobile" carrier_id="2021" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile" carrier_id="2021" mcc="302" mnc="630" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile" carrier_id="2021" mcc="302" mnc="640" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+
+  <!--
+    Bell - Solo Mobile - 302610/302630/302640 gid=3F
+    - similar to virgin, same thing about 630/640 and ims
+  -->
+  <apn carrier="Solo Mobile" carrier_id="2054" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,dun,hipri,ia,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="3F" user_editable="false"/>
+  <apn carrier="Solo Mobile" carrier_id="2054" mcc="302" mnc="630" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,dun,hipri,ia,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="3F" user_editable="false"/>
+  <apn carrier="Solo Mobile" carrier_id="2054" mcc="302" mnc="640" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,dun,hipri,ia,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="3F" user_editable="false"/>
+
+  <!--
+    Bell - PC Mobile - 302610/302630/302640 gid=40
+    - similar to virgin, same thing about 630/640 and ims
+  -->
+  <apn carrier="PC Mobile" carrier_id="10005" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="40" user_editable="false"/>
+  <apn carrier="PC Mobile" carrier_id="10005" mcc="302" mnc="630" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="40" user_editable="false"/>
+  <apn carrier="PC Mobile" carrier_id="10005" mcc="302" mnc="640" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="40" user_editable="false"/>
+  <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+
+  <!--
+    Bell - Lucky Mobile - 302610/302630/302640 gid=42
+    - similar to virgin, same thing about 630/640 and ims
+  -->
+  <apn carrier="Lucky Mobile" carrier_id="2122" mcc="302" mnc="610" apn="connect" mmsc="http://mms.luckymobile.ca/mms/wapenc" type="ia,default,dun,supl,mms,hipri,xcap" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="42" user_editable="false"/>
+  <apn carrier="Lucky Mobile" carrier_id="2122" mcc="302" mnc="630" apn="connect" mmsc="http://mms.luckymobile.ca/mms/wapenc" type="ia,default,dun,supl,mms,hipri,xcap" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="42" user_editable="false"/>
+  <apn carrier="Lucky Mobile" carrier_id="2122" mcc="302" mnc="640" apn="connect" mmsc="http://mms.luckymobile.ca/mms/wapenc" type="ia,default,dun,supl,mms,hipri,xcap" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="42" user_editable="false"/>
+  <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+
+  <!-- TODO: 302660 onwards -->
 </apns>
