@@ -147,10 +147,11 @@
   <!--
     EastLink (https://www.eastlink.ca/) - 302270
     - based on motorola APNs (eastlink does not sell pixels - https://www.eastlink.ca/mobile/phones, and the google apns seem to be outdated/incomplete)
+    - removed motorola-specific agps type
     - https://my.eastlink.ca/Portals/0/Wireless/Eastlink-Config-Android-Windows-Other.pdf?versio
     - renamed
   -->
-  <apn carrier="Eastlink" carrier_id="2252" mcc="302" mnc="270" apn="wisp.mobi.eastlink.ca" type="default,dun,agps,supl,fota,hipri,ia" skip_464xlat="1" mtu="1500"/>
+  <apn carrier="Eastlink" carrier_id="2252" mcc="302" mnc="270" apn="wisp.mobi.eastlink.ca" type="default,dun,supl,fota,hipri,ia" skip_464xlat="1" mtu="1500"/>
   <apn carrier="Eastlink MMS" carrier_id="2252" mcc="302" mnc="270" apn="mms.mobi.eastlink.ca" type="mms" mmsc="http://mmss.mobi.eastlink.ca" mmsproxy="10.232.12.49" mmsport="8080" skip_464xlat="1" mtu="1500"/>
   <apn carrier="Eastlink IMS" carrier_id="2252" mcc="302" mnc="270" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" skip_464xlat="1" mtu="1500"/>
   <apn carrier="Eastlink XCAP" carrier_id="2252" mcc="302" mnc="270" apn="services" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" skip_464xlat="1" mtu="1500"/>
@@ -195,10 +196,11 @@
   <!--
     MTS (Rogers MVNO) - 302370 spn=MTS
     - based on motorola APNs
+    - removed motorola-specific agps type
     - no carrier_list match
     - see the Bell MTS APNs below
   -->
-  <apn carrier="MTS S" mcc="302" mnc="370" apn="sp.mts" type="default,mms,agps,supl,fota,hipri" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP" mmsc="http://mmsc2.mts.net/"/>
+  <apn carrier="MTS S" mcc="302" mnc="370" apn="sp.mts" type="default,mms,supl,fota,hipri" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP" mmsc="http://mmsc2.mts.net/"/>
   <apn carrier="MTS Tethering S" mcc="302" mnc="370" apn="internet.mts" type="dun" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP"/>
 
   <!--
@@ -428,8 +430,8 @@
   <apn carrier="Cityfone Tethering" carrier_id="2057" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x97"/>
   <apn carrier="Cityfone Tethering" carrier_id="2057" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="spn" mvno_match_data="CITYFONE"/>
   <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="CC" user_visible="false"/>
-  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_type="imsi" mvno_match_data="302720x97" user_visible="false"/>
-  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_type="spn" mvno_match_data="CITYFONE" user_visible="false"/>
+  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x97" user_visible="false"/>
+  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="spn" mvno_match_data="CITYFONE" user_visible="false"/>
 
   <!--
     Rogers - Chatr (https://www.chatrwireless.com/) - 302720 gid=D2 OR 302720 imsi=302720x84/302720x83/302720x94
