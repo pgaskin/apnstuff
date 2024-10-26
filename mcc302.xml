@@ -79,7 +79,7 @@
   <apn carrier="Public Mobile XCAP" carrier_id="2089" mcc="302" mnc="221" apn="services.mb.com" type="xcap" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
 
   <!--
-    TELUS - PC Mobile (https://www.pcmobile.ca/en/) - 302220/302221 gid=5043
+    PC Mobile (TELUS MVNO) (https://www.pcmobile.ca/en/) - 302220/302221 gid=5043
     - based on google APNs
     - https://www.pcmobile.ca/en/help/sim-card-and-phone-support/APN-settings/
     - renamed
@@ -183,17 +183,19 @@
   <apn carrier="Fido Tethering" carrier_id="1962" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV4V6" user_editable="false"/>
 
   <!--
-    MTS partially as Rogers MVNO - 302370 gid=2C
+    MTS (Rogers MVNO) - 302370 gid=2C
     - based on google APNs
+    - see the Bell MTS APNs below
   -->
   <apn carrier="MTS" carrier_id="578" mcc="302" mnc="370" apn="sp.mts" mmsc="http://mmsc2.mts.net/" mmsproxy="wapgw1.mts.net" mmsport="9201" type="default,mms,supl" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="2C"/>
   <apn carrier="MTS Tethering" carrier_id="578" mcc="302" mnc="370" apn="internet.mts" type="dun" mvno_type="gid" mvno_match_data="2C" user_visible="false"/>
 
 
   <!--
-    MTS partially as Rogers MVNO - 302370 spn=MTS
+    MTS (Rogers MVNO) - 302370 spn=MTS
     - based on motorola APNs
     - no carrier_list match
+    - see the Bell MTS APNs below
   -->
   <apn carrier="MTS S" mcc="302" mnc="370" apn="sp.mts" type="default,mms,agps,supl,fota,hipri" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP" mmsc="http://mmsc2.mts.net/"/>
   <apn carrier="MTS Tethering S" mcc="302" mnc="370" apn="internet.mts" type="dun" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP"/>
@@ -292,7 +294,7 @@
   <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
 
   <!--
-    Bell - Solo Mobile - 302610/302630/302640 gid=3F
+    Solo Mobile (Bell MVNO) (https://www.solomobile.ca/) - 302610/302630/302640 gid=3F
     - similar to virgin, same thing about 630/640 and ims
   -->
   <apn carrier="Solo Mobile" carrier_id="2054" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,dun,hipri,ia,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="3F" user_editable="false"/>
@@ -300,7 +302,7 @@
   <apn carrier="Solo Mobile" carrier_id="2054" mcc="302" mnc="640" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,dun,hipri,ia,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="3F" user_editable="false"/>
 
   <!--
-    Bell - PC Mobile - 302610/302630/302640 gid=40
+    PC Mobile (Bell MVNO) (https://www.pcmobile.ca/en/) - 302610/302630/302640 gid=40
     - similar to virgin, same thing about 630/640 and ims
   -->
   <apn carrier="PC Mobile" carrier_id="10005" mcc="302" mnc="610" apn="pda.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="default,mms,supl,dun,hipri,xcap,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="40" user_editable="false"/>
@@ -317,7 +319,7 @@
   <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
 
   <!--
-    Bell - Lucky Mobile - 302610/302630/302640 gid=42
+    Bell - Lucky Mobile (https://www.luckymobile.ca/) - 302610/302630/302640 gid=42
     - similar to virgin, same thing about 630/640 and ims
   -->
   <apn carrier="Lucky Mobile" carrier_id="2122" mcc="302" mnc="610" apn="connect" mmsc="http://mms.luckymobile.ca/mms/wapenc" type="ia,default,dun,supl,mms,hipri,xcap" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="42" user_editable="false"/>
@@ -333,5 +335,29 @@
   <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
 
-  <!-- TODO: 302660 onwards -->
+  <!--
+    Bell - MTS (https://www.bellmts.ca/personal?cookieCheck=1) - 302660 gid=2C/spn=MTS
+    - based on google's APNs
+    - note that google's doesn't have the gid=2C match condition, but it's not important since only MTS uses 302660
+    - added carrier_id=578
+  -->
+  <apn carrier="MTS" carrier_id="578" mcc="302" mnc="660" apn="sp.mts" mmsc="http://mmsc2.mts.net/" mmsproxy="wapgw1.mts.net" mmsport="9401" type="default,mms,supl" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="MTS Tethering" carrier_id="578" mcc="302" mnc="660" apn="internet.mts" type="dun" user_visible="false"/>
+
+  <!--
+    SaskTel (https://www.sasktel.com/store/browse/Personal/_/N-26v0) - 302681
+    - based on google's APNs
+    - https://support.sasktel.com/app/answers/detail/a_id/12121
+  -->
+  <apn carrier="SaskTel" mcc="302" mnc="681" apn="pda.stm.sk.ca" mmsc="http://mms.sasktel.com/" mmsproxy="mig.sasktel.com" mmsport="80" type="default,mms,supl,xcap" protocol="IPV4V6"/>
+  <apn carrier="SaskTel IMS" mcc="302" mnc="681" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
+
+  <!--
+    Bell IoT - 302690 - gid=41/gid=43
+    - based on aosp
+  -->
+  <apn carrier="Bell IoT CC" carrier_id="576" mcc="302" mnc="690" apn="mnet.bell.ca.ioe" type="default,ia,supl" authtype="2" protocol="IPV4V6" mvno_type="gid" mvno_match_data="41"/>
+  <apn carrier="Bell IoT MC" carrier_id="576" mcc="302" mnc="690" apn="inet.bell.ca.m2m" type="default,ia,supl" authtype="2" protocol="IPV4V6" mvno_type="gid" mvno_match_data="43"/>
+
+  <!-- TODO: 302720 onwards -->
 </apns>
