@@ -26,6 +26,9 @@ import (
 // go run . 1 aosp.xml lineage.xml google.xml motorola.xml samsung.xml > mcc302-all.split.html
 // go run . 1 google.xml motorola.xml samsung.xml > mcc302-good.split.html
 // env -C tmp go run .. 1 lineage_orig.xml lineage_cl_406557_1.xml aosp.xml google.xml > tmp/tmp.html
+// env -C ../curated go1.23.0 run ../cmp 1 lineage.xml aosp.xml google.xml custom.xml > ../curated/diff.html
+// env -C ../curated go1.23.0 run ../cmp 1 google.xml custom.xml > ../curated/diff1.html
+// env -C ../curated go1.23.0 run ../cmp 1 lineage.xml custom.xml > ../curated/diff2.html
 
 func main() {
 	splitAPNTypes, err := strconv.ParseBool(os.Args[1])
