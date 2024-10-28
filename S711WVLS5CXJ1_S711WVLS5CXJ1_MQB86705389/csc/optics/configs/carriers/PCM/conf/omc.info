@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omcInfo>
+  <contentType>0</contentType>
+  <version>SAOMC_SM-S711W_OYV_PCM_14_0009</version>
+  <model>
+    <name>SM-S711W</name>
+  </model>
+  <catalog>
+    <customer>yes</customer>
+    <customerEdition>ED0003</customerEdition>
+    <carrierListVersion>140028</carrierListVersion>
+    <cscfeature>yes</cscfeature>
+    <carrierfeature>yes</carrierfeature>
+    <cp>no</cp>
+    <imsupdate>no</imsupdate>
+  </catalog>
+  <carrierList>
+    <carrierCount>2</carrierCount>
+    <carrier>
+      <mcc>204</mcc>
+      <mnc>04</mnc>
+      <codeType>HEX</codeType>
+      <gid>40</gid>
+      <networkName>PC mobile</networkName>
+    </carrier>
+    <carrier>
+      <mcc>302</mcc>
+      <mnc>610</mnc>
+      <codeType>HEX</codeType>
+      <gid>40</gid>
+      <networkName>PC mobile</networkName>
+    </carrier>
+  </carrierList>
+</omcInfo>

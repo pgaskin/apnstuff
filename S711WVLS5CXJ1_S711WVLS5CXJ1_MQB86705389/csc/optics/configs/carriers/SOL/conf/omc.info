@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omcInfo>
+  <contentType>0</contentType>
+  <version>SAOMC_SM-S711W_OYV_SOL_14_0010</version>
+  <model>
+    <name>SM-S711W</name>
+  </model>
+  <catalog>
+    <customer>yes</customer>
+    <customerEdition>ED0003</customerEdition>
+    <carrierListVersion>140028</carrierListVersion>
+    <cscfeature>yes</cscfeature>
+    <carrierfeature>yes</carrierfeature>
+    <cp>no</cp>
+    <imsupdate>no</imsupdate>
+  </catalog>
+  <carrierList>
+    <carrierCount>6</carrierCount>
+    <carrier>
+      <mcc>204</mcc>
+      <mnc>04</mnc>
+      <codeType>HEX</codeType>
+      <gid>42</gid>
+      <networkName>Lucky Mobile</networkName>
+    </carrier>
+    <carrier>
+      <mcc>204</mcc>
+      <mnc>04</mnc>
+      <codeType>HEX</codeType>
+      <gid>3F</gid>
+      <networkName>Solo Mobile</networkName>
+    </carrier>
+    <carrier>
+      <mcc>302</mcc>
+      <mnc>370</mnc>
+      <codeType>HEX</codeType>
+      <gid>2C</gid>
+      <networkName>Bell MTS</networkName>
+    </carrier>
+    <carrier>
+      <mcc>302</mcc>
+      <mnc>610</mnc>
+      <codeType>HEX</codeType>
+      <gid>3F</gid>
+      <networkName>Solo Mobile</networkName>
+    </carrier>
+    <carrier>
+      <mcc>302</mcc>
+      <mnc>610</mnc>
+      <codeType>HEX</codeType>
+      <gid>42</gid>
+      <networkName>Lucky Mobile</networkName>
+    </carrier>
+    <carrier>
+      <mcc>302</mcc>
+      <mnc>660</mnc>
+      <codeType>HEX</codeType>
+      <gid>2C</gid>
+      <networkName>Bell MTS</networkName>
+    </carrier>
+  </carrierList>
+</omcInfo>
