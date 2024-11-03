@@ -7,3 +7,4 @@ The original goal of all this was fixing broken APNs for Freedom Mobile on Linea
 - [apndiff.go](./experiments/cmp/apndiff.go) - Very rough tool to make comparing APN XMLs easier (note that this doesn't currently handle the fallback and carrier_id matching exactly the same way as AOSP; it's a rough approximation).
 - [carrierId.proto](./android14-qpr3-release/carrierId.proto) - Protobuf schema for carrier_list.pb (shipped with AOSP TelephonyProvider and Google Carrier Services).
 - [carrier_settings.proto](./android14-qpr3-release/carrier_settings.proto) - Protobuf schema for Google Carrier Services / Pixel carrierconfig.
+- [links.md](./links.md) - Links to specs and posts about things useful for when I was troubleshooting this.
