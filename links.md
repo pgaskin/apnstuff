@@ -90,3 +90,7 @@ https://www.3gpp.org/ftp/information/presentations/presentations_2010/2010_06_La
 https://github.com/kyujin-cho/pixel-volte-patch
 
 - Pixel IMS app - gui for CarrierConfig
+
+https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/telephony/java/android/telephony/data/ApnSetting.java
+
+- A bunch of definitions and spec references for APN parameters.
