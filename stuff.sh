@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 for x in carrier_list carrier_settings carrierId; do
-for y in android-12.0.0_r4 android-13.0.0_r3 android14-qpr3-release; do
+for y in android-12.0.0_r4 android-13.0.0_r3 android14-qpr3-release android16-qpr2-release; do
 protoc -I $y $x.proto -o $y/$x.proto.pb
 done
 done
@@ -36,6 +36,15 @@ protoscope -descriptor-set android14-qpr3-release/carrier_settings.proto.pb -mes
 done
 python3 lineage/scripts/carriersettings-extractor/carriersettings_extractor.py -i shiba_AP2A.240905.003/CarrierSettings -a out/2024 -v out/2024
 xmllint --format out/2024/apns-conf.xml --output out/2024/apns-conf.xml
+
+mkdir out/2026
+bsdtar xOf blazer_BP4A.260205.001/TelephonyProvider.apk assets/carrier_list.pb | protoscope -descriptor-set android16-qpr2-release/carrierId.proto.pb -message-type carrierIdentification.CarrierList -print-field-names -print-enum-names > out/2026/carrierId.txt
+protoscope -descriptor-set android16-qpr2-release/carrier_list.proto.pb -message-type com.google.carrier.CarrierList -print-field-names -print-enum-names < blazer_BP4A.260205.001/CarrierSettings/carrier_list.pb > out/2026/carrier_list.txt
+for x in freedommobile bell telus shaw rogers videotron fizz; do
+protoscope -descriptor-set android16-qpr2-release/carrier_settings.proto.pb -message-type com.google.carrier.CarrierSettings -print-field-names -print-enum-names < blazer_BP4A.260205.001/CarrierSettings/${x}_ca.pb > out/2026/carrier_settings_$x.txt
+done
+python3 lineage/scripts/carriersettings-extractor/carriersettings_extractor.py -i blazer_BP4A.260205.001/CarrierSettings -a out/2026 -v out/2026
+xmllint --format out/2026/apns-conf.xml --output out/2026/apns-conf.xml
 
 exit
 

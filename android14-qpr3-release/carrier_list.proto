@@ -62,4 +62,3 @@ message CarrierList {
   // The version number of this CarrierList file
   optional int64 version = 2;
 }
-
