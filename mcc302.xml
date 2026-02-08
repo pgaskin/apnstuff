@@ -3,7 +3,7 @@
   <!--
     APNs for Canadian carriers
     Compiled by Patrick Gaskin using a combination of data from:
-    - Pixel shiba_AP2A.240905.003 carriersettings
+    - Pixel blazer_BP4A.260205.001 carriersettings
     - Samsung S24 (S921W) S921WVLS3AXI1/S921USQS3AXI1/MQB86303474 apns-conf
     - Motorola Edge 2024 (XT2045-1) XT2405-1_AVATRN_RETCA_14_U2UANS34.72-43-1-3_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC apns-conf
     - Patches to device/sample apns-conf in AOSP code review
@@ -32,12 +32,13 @@
 
   <!--
     Cogeco (https://corpo.cogeco.com/cgo/en/press-room/press-releases/cogeco-announces-strategic-partnerships-national-wireless-network-operator-and-eastlink-launch-mobility-services-canada/) - 302150/302151
-    - based on motorola APNs (goog/sam don't have it)
-    - not generally available yet
+    - based on google APNs
     - renamed
   -->
-  <apn carrier="Cogeco" mcc="302" mnc="150" apn="data.cogecomobile.ca" type="default,mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
-  <apn carrier="Cogeco" mcc="302" mnc="151" apn="data.cogecomobile.ca" type="default,mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco" mcc="302" mnc="150" apn="data.cogeco" type="default" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco" mcc="302" mnc="151" apn="data.cogeco" type="default" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco MMS" mcc="302" mnc="150" apn="mms.cogeco" type="mms" mmsc="http://mms.cogeco.ca/" mmsproxy="10.232.12.49" mmsport="8080" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Cogeco MMS" mcc="302" mnc="151" apn="mms.cogeco" type="mms" mmsc="http://mms.cogeco.ca/" mmsproxy="10.232.12.49" mmsport="8080" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
   <apn carrier="Cogeco IMS" mcc="302" mnc="150" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
   <apn carrier="Cogeco IMS" mcc="302" mnc="151" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
   <apn carrier="Cogeco SOS" mcc="302" mnc="150" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
@@ -51,12 +52,11 @@
     - renamed
     - sp.koodo.com type dun removed, supl added (https://android-review.googlesource.com/c/device/sample/+/3191311)
     - sp.koodo.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191370)
-    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3191370)
   -->
   <apn carrier="Koodo" carrier_id="2020" mcc="302" mnc="220" apn="sp.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
   <apn carrier="Koodo" carrier_id="2020" mcc="302" mnc="221" apn="sp.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
-  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
-  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
+  <apn carrier="Koodo IMS" carrier_id="2020" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
   <apn carrier="Koodo SOS" carrier_id="2020" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
   <apn carrier="Koodo SOS" carrier_id="2020" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4B4F" user_visible="false"/>
   <apn carrier="Koodo Services" carrier_id="2020" mcc="302" mnc="220" apn="services.koodo.com" mmsc="http://aliasredirect.net/proxy/koodo/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="4B4F" user_editable="false"/>
@@ -71,14 +71,13 @@
     - renamed
     - isp.mb.com protocol+roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191510)
     - sp.mb.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3191510)
-    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3191510)
   -->
   <apn carrier="Public Mobile" carrier_id="2089" mcc="302" mnc="220" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
   <apn carrier="Public Mobile" carrier_id="2089" mcc="302" mnc="221" apn="sp.mb.com" mmsc="http://aliasredirect.net/proxy/mb/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
   <apn carrier="Public Mobile Tethered" carrier_id="2089" mcc="302" mnc="220" apn="isp.mb.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
   <apn carrier="Public Mobile Tethered" carrier_id="2089" mcc="302" mnc="221" apn="isp.mb.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="4D4F" user_editable="false"/>
-  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
-  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
+  <apn carrier="Public Mobile IMS" carrier_id="2089" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
   <apn carrier="Public Mobile SOS" carrier_id="2089" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
   <apn carrier="Public Mobile SOS" carrier_id="2089" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
   <apn carrier="Public Mobile XCAP" carrier_id="2089" mcc="302" mnc="220" apn="services.mb.com" type="xcap" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="4D4F" user_visible="false"/>
@@ -106,14 +105,13 @@
     - renamed
     - isp.telus.com protocol+roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3185999)
     - sp.telus.com roaming_protocol=IP added (https://android-review.googlesource.com/c/device/sample/+/3185999)
-    - ims roaming_protocol changed from IPV6 to IPV4V6 (https://android-review.googlesource.com/c/device/sample/+/3185999)
   -->
   <apn carrier="TELUS" carrier_id="1404" mcc="302" mnc="220" apn="sp.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
   <apn carrier="TELUS" carrier_id="1404" mcc="302" mnc="221" apn="sp.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="default,mms,supl,hipri,ia" protocol="IPV4V6" roaming_protocol="IP" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
   <apn carrier="TELUS Tethered" carrier_id="1404" mcc="302" mnc="220" apn="isp.telus.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
   <apn carrier="TELUS Tethered" carrier_id="1404" mcc="302" mnc="221" apn="isp.telus.com" type="dun" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
-  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
-  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="220" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
+  <apn carrier="TELUS IMS" carrier_id="1404" mcc="302" mnc="221" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="3|9|10|11|14|15|18|20" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
   <apn carrier="TELUS SOS" carrier_id="1404" mcc="302" mnc="220" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
   <apn carrier="TELUS SOS" carrier_id="1404" mcc="302" mnc="221" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="5455" user_visible="false"/>
   <apn carrier="TELUS Services" carrier_id="1404" mcc="302" mnc="220" apn="services.telus.com" mmsc="http://aliasredirect.net/proxy/mmsc" mmsproxy="mmscproxy.mobility.ca" mmsport="8799" type="mms,xcap" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="5455" user_editable="false"/>
@@ -151,9 +149,9 @@
 
   <!--
     EastLink (https://www.eastlink.ca/) - 302270
-    - based on motorola APNs (eastlink does not sell pixels - https://www.eastlink.ca/mobile/phones, and the google apns seem to be outdated/incomplete)
+    - based on motorola and google APNs
     - removed motorola-specific agps type
-    - https://my.eastlink.ca/Portals/0/Wireless/Eastlink-Config-Android-Windows-Other.pdf?versio
+    - https://my.eastlink.ca/Portals/0/Wireless/Eastlink-Config-Android-Windows-Other.pdf
     - renamed
   -->
   <apn carrier="Eastlink" carrier_id="2252" mcc="302" mnc="270" apn="wisp.mobi.eastlink.ca" type="default,dun,supl,fota,hipri,ia" skip_464xlat="1" mtu="1500"/>
@@ -163,14 +161,15 @@
 
   <!--
     Rogers - Chatr Mobile (https://www.chatrwireless.com/) - 302320
-    - based on google APNs (is the mostly the same as the aosp ones, but also has xcap/ims)
+    - based on google APNs
     - https://www.chatrwireless.com/support/network-and-data
     - renamed
   -->
-  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="320" apn="chatrisp.apn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
-  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="320" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
-  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="320" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
+  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="320" apn="chatrisp.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="320" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="320" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
   <apn carrier="Chatr XCAP" carrier_id="2055" mcc="302" mnc="320" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_visible="false"/>
+  <apn carrier="Chatr SOS" carrier_id="2055" mcc="302" mnc="320" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" user_visible="false"/>
 
   <!--
     Rogers - Fido (https://www.fido.ca/) - 302370 + 302370 gid=DD
@@ -178,16 +177,18 @@
     - https://forums.fido.ca/t5/General-Support/Fido-s-APN-amp-MMS-Settings/m-p/91614 (this one is outdated - fido-core-appl1.apn has been replaced with ltedata.apn)
     - https://www.fido.ca/support/mobility/cannot-open-websites-apps-mobile-phone (this one is newer)
   -->
-  <apn carrier="Fido" carrier_id="1962" mcc="302" mnc="370" apn="ltemobile.apn" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="DD" user_editable="false"/>
-  <apn carrier="Fido" carrier_id="1962" mcc="302" mnc="370" apn="ltemobile.apn" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="default,mms,supl,hipri,fota,ia" protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
+  <apn carrier="Fido Internet" carrier_id="1962" mcc="302" mnc="370" apn="ltemobile.apn" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="default,mms,supl,hipri,fota,ia" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="DD" user_editable="false"/>
+  <apn carrier="Fido Internet" carrier_id="1962" mcc="302" mnc="370" apn="ltemobile.apn" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="default,mms,supl,hipri,fota,ia" protocol="IPV6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
   <apn carrier="Fido Services" carrier_id="1962" mcc="302" mnc="370" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="DD" user_visible="false"/>
   <apn carrier="Fido Services" carrier_id="1962" mcc="302" mnc="370" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_visible="false"/>
   <apn carrier="Fido Services" carrier_id="1962" mcc="302" mnc="370" apn="netsvcs" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="DD" user_visible="false"/>
   <apn carrier="Fido Services" carrier_id="1962" mcc="302" mnc="370" apn="netsvcs" mmsc="http://mms.fido.ca" mmsproxy="mmsproxy.fido.ca" mmsport="80" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
-  <apn carrier="Fido IMS" carrier_id="1962" mcc="302" mnc="370" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="DD" user_visible="false"/>
-  <apn carrier="Fido IMS" carrier_id="1962" mcc="302" mnc="370" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
-  <apn carrier="Fido Tethering" carrier_id="1962" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="gid" mvno_match_data="DD" user_editable="false"/>
-  <apn carrier="Fido Tethering" carrier_id="1962" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV4V6" user_editable="false"/>
+  <apn carrier="Fido IMS" carrier_id="1962" mcc="302" mnc="370" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="DD" user_visible="false"/>
+  <apn carrier="Fido IMS" carrier_id="1962" mcc="302" mnc="370" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
+  <apn carrier="Fido Tethering" carrier_id="1962" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV6" mvno_type="gid" mvno_match_data="DD" user_editable="false"/>
+  <apn carrier="Fido Tethering" carrier_id="1962" mcc="302" mnc="370" apn="ltedata.apn" type="dun" protocol="IPV6" user_editable="false"/>
+  <apn carrier="Fido SOS" carrier_id="1962" mcc="302" mnc="370" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="DD" user_visible="false"/>
+  <apn carrier="Fido SOS" carrier_id="1962" mcc="302" mnc="370" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" user_visible="false"/>
 
   <!--
     MTS (Rogers MVNO) - 302370 gid=2C
@@ -209,10 +210,19 @@
   <apn carrier="MTS Tethering S" mcc="302" mnc="370" apn="internet.mts" type="dun" mvno_type="spn" mvno_match_data="MTS" protocol="IPV4V6" roaming_protocol="IP"/>
 
   <!--
+    SSi MVNOs - 302480
+    - based on google APNs
+    - https://www.eeyoumobile.com/en/help-center/
+  -->
+  <apn carrier="Eeyou" mcc="302" mnc="480" apn="apn.em.com" mmsc="http://mms.eeyoumobility.com" mmsproxy="mms.eeyoumobility.com" mmsport="80" type="default,mms" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="3024800002"/>
+  <apn carrier="SSI" mcc="302" mnc="480" apn="ssi992.ssimicro.com" mmsc="http://mms.ssimicro.com" mmsproxy="mms.ssimicro.com" mmsport="80" type="default,mms" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302480017"/>
+
+  <!--
     Quebecor - Freedom Mobile (https://www.freedommobile.ca/en-CA) - 302490
     - based on google APNs (they are the best ones: samsung and motorola have some of it, but are missing some options; aosp is bad)
     - fully tested (note that it also requires at least the 302500/302500 apns to work correctly, and may also require other canadian ones for nationwide)
     - renamed
+    - manually tested on 2026-02-07
   -->
   <apn carrier="Freedom Mobile" carrier_id="1895" mcc="302" mnc="490" apn="internet.freedommobile.ca" type="default,supl,dun" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="false"/>
   <apn carrier="Freedom Mobile MMS" carrier_id="1895" mcc="302" mnc="490" apn="mms.freedommobile.ca" mmsc="http://mms.freedommobile.ca" mmsproxy="74.115.197.70" mmsport="8080" type="mms" user_editable="false"/>
@@ -249,19 +259,15 @@
     Quebecor - Fizz (https://fizz.ca/en) - 302500 gid=55
     - mostly based on google's APNs 
     - almost as much of a mess as Videotron
-    - google's one has ipv6-only for ims, and I'm 99% certain it should be IPV4V6 like motorola's and other carriers
-    - motorola's only has bearer 18 for xcap, and I'm 99% it should be for all bearers like google's
-    - motorola has the apns copied to mnc=510 too, but I'm 70% sure this is a mistake since it isn't in the carrier_list and nothing else has it
-    - samsung's doesn't have ims, but motorola and google do, and I'm 100% certain it should
-    - samsung's has only IPV6 as the protocol for IMS, but motorola's has IPV4V6, and I'm 99% certain the latter is correct
     - https://fizz.ca/en/faq/what-are-fizz-network-settings-apn
     - https://fizz.ca/en/faq/why-volte-important
     - renamed
-    - my diff page is extremely helpful for comparing these: https://htmlpreview.github.io/?https://github.com/pgaskin/apnstuff/blob/master/experiments/cmp/mcc302-all.split.html
+    - manually tested on 2026-02-07
   -->
   <apn carrier="Fizz" carrier_id="2417" mcc="302" mnc="500" apn="mobile.bm" mmsc="http://mms.mobile.bm" mmsproxy="mmsproxy.mobile.bm" mmsport="80" type="default,mms,supl" mvno_type="gid" mvno_match_data="55" user_editable="false"/>
-  <apn carrier="Fizz IMS" carrier_id="2417" mcc="302" mnc="500" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
-  <apn carrier="Fizz XCAP" carrier_id="2417" mcc="302" mnc="500" apn="xcap" type="xcap" protocol="IP" roaming_protocol="IP" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
+  <apn carrier="Fizz IMS" carrier_id="2417" mcc="302" mnc="500" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
+  <apn carrier="Fizz XCAP" carrier_id="2417" mcc="302" mnc="500" apn="xcap" type="xcap" mvno_type="gid" mvno_match_data="55" user_visible="false" user_editable="false"/>
+  <apn carrier="Fizz SOS" carrier_id="2417" mcc="302" mnc="500" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV6" mvno_type="gid" mvno_match_data="55" user_visible="false"/>
 
   <!--
     Bell Mobility (https://www.bell.ca/) - 302610/302630/302640
@@ -276,9 +282,9 @@
   <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
   <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
   <apn carrier="Bell Mobility Apps" carrier_id="576" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
-  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
-  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
-  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" user_visible="false"/>
+  <apn carrier="Bell Mobility IMS" carrier_id="576" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" user_visible="false"/>
   <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
   <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
   <apn carrier="Bell Mobility SOS" carrier_id="576" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" user_visible="false"/>
@@ -293,9 +299,9 @@
   <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
   <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
   <apn carrier="Virgin Mobile Apps" carrier_id="2021" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="3E" user_editable="false"/>
-  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
-  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
-  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
+  <apn carrier="Virgin Mobile IMS" carrier_id="2021" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
   <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
   <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
   <apn carrier="Virgin Mobile SOS" carrier_id="2021" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="3E" user_visible="false"/>
@@ -318,9 +324,9 @@
   <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
   <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
   <apn carrier="PC Mobile Apps" carrier_id="10005" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
-  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
-  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
-  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
+  <apn carrier="PC Mobile IMS" carrier_id="10005" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
   <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
   <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
   <apn carrier="PC Mobile SOS" carrier_id="10005" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="40" user_visible="false"/>
@@ -335,9 +341,9 @@
   <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="610" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="630" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile Apps" carrier_id="2122" mcc="302" mnc="640" apn="apps.bell.ca" mmsc="http://mms.bell.ca/mms/wapenc" type="mms,xcap" protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
-  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
-  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
-  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="610" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="630" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
+  <apn carrier="Lucky Mobile IMS" carrier_id="2122" mcc="302" mnc="640" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|20" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="610" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="630" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
   <apn carrier="Lucky Mobile SOS" carrier_id="2122" mcc="302" mnc="640" apn="sos" type="emergency" protocol="IPV4V6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="42" user_visible="false"/>
@@ -388,76 +394,70 @@
     - almost exactly matches AOSP, but has some newer IMS-related stuff (e.g., protocol IP -> IPV4V6)
     - renamed
   -->
-  <apn carrier="Rogers" carrier_id="1403" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,supl,hipri,ia,mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
-  <apn carrier="Rogers Tethering" carrier_id="1403" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" user_editable="false"/>
-  <apn carrier="Rogers IMS" carrier_id="1403" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
+  <apn carrier="Rogers Internet" carrier_id="1403" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,supl,hipri,ia,mms" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_editable="false"/>
+  <apn carrier="Rogers Tethering" carrier_id="1403" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" user_editable="false"/>
+  <apn carrier="Rogers IMS" carrier_id="1403" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" user_visible="false"/>
   <apn carrier="Rogers Services" carrier_id="1403" mcc="302" mnc="720" apn="netsvcs" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="18" user_visible="false"/>
   <apn carrier="Rogers XCAP" carrier_id="1403" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" user_visible="false"/>
+  <apn carrier="Rogers SOS" carrier_id="1403" mcc="302" mnc="720" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" user_visible="false"/>
 
   <!--
     Rogers 5G (https://www.rogers.com) - 302720 gid=A4
+    - based on google APNs
     - similar to Rogers, has slightly different APNs
     - https://www.rogers.com/support/mobility/5G-network-faqs
   -->
-  <apn carrier="Rogers" carrier_id="10025" mcc="302" mnc="720" apn="mobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,supl,hipri,ia,mms" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="A4" user_editable="false"/>
+  <apn carrier="Rogers Internet" carrier_id="10025" mcc="302" mnc="720" apn="mobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,supl,hipri,ia,mms" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="A4" user_editable="false"/>
   <apn carrier="Rogers Tethering" carrier_id="10025" mcc="302" mnc="720" apn="data.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="A4" user_editable="false"/>
   <apn carrier="Rogers IMS" carrier_id="10025" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV6" bearer_bitmask="14|18|20" mvno_type="gid" mvno_match_data="A4" user_visible="false"/>
   <apn carrier="Rogers Services" carrier_id="10025" mcc="302" mnc="720" apn="netsvcs" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="A4" user_visible="false"/>
   <apn carrier="Rogers XCAP" carrier_id="10025" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="A4" user_visible="false"/>
+  <apn carrier="Rogers SOS" carrier_id="10025" mcc="302" mnc="720" apn="sos" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="A4" user_visible="false"/>
 
   <!--
     Rogers - Tbaytel (https://www.tbaytel.net/) - 302720 gid=BA OR 302720 imsi=302720x92
-    - similar to Rogers
+    - based on google APNs
+    - similar to Chatr
     - added missing carrier_id
   -->
-  <apn carrier="Tbaytel" carrier_id="2090" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="BA"/>
-  <apn carrier="Tbaytel" carrier_id="2090" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x92"/>
+  <apn carrier="Tbaytel Internet" carrier_id="2090" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="BA"/>
+  <apn carrier="Tbaytel Internet" carrier_id="2090" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x92"/>
   <apn carrier="Tbaytel Tethering" carrier_id="2090" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="gid" mvno_match_data="BA"/>
   <apn carrier="Tbaytel Tethering" carrier_id="2090" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x92"/>
-  <apn carrier="Tbaytel IMS" carrier_id="2090" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="BA" user_visible="false"/>
-  <apn carrier="Tbaytel IMS" carrier_id="2090" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x92" user_visible="false"/>
+  <apn carrier="Tbaytel IMS" carrier_id="2090" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="BA" user_visible="false"/>
+  <apn carrier="Tbaytel IMS" carrier_id="2090" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x92" user_visible="false"/>
   <apn carrier="Tbaytel Services" carrier_id="2090" mcc="302" mnc="720" apn="netsvcs" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="gid" mvno_match_data="BA" user_visible="false"/>
   <apn carrier="Tbaytel Services" carrier_id="2090" mcc="302" mnc="720" apn="netsvcs" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="mms,xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="18" mvno_type="imsi" mvno_match_data="302720x92" user_visible="false"/>
   <apn carrier="Tbaytel XCAP" carrier_id="2090" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="BA" user_visible="false"/>
   <apn carrier="Tbaytel XCAP" carrier_id="2090" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x92" user_visible="false"/>
-
-  <!--
-    Rogers - Cityfone (https://www.cityfone.net/) - 302720 gid=CC OR 302720 imsi=302720x97 OR 302720 spn=CITYFONE
-    - similar to Rogers
-    - gid=CC doesn't seem to exist in carrier_list, but I'm keeping it anyways
-    - added missing carrier_id
-    - being discontinued, see website
-  -->
-  <apn carrier="Cityfone" carrier_id="2057" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV4V6" mvno_type="gid" mvno_match_data="CC"/>
-  <apn carrier="Cityfone" carrier_id="2057" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x97"/>
-  <apn carrier="Cityfone" carrier_id="2057" mcc="302" mnc="720" apn="ltemobile.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="mmsproxy.rogers.com" mmsport="80" type="default,mms,supl,hipri,fota" protocol="IPV4V6" mvno_type="spn" mvno_match_data="CITYFONE"/>
-  <apn carrier="Cityfone Tethering" carrier_id="2057" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="gid" mvno_match_data="CC"/>
-  <apn carrier="Cityfone Tethering" carrier_id="2057" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x97"/>
-  <apn carrier="Cityfone Tethering" carrier_id="2057" mcc="302" mnc="720" apn="ltedata.apn" type="dun" protocol="IPV4V6" mvno_type="spn" mvno_match_data="CITYFONE"/>
-  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="CC" user_visible="false"/>
-  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x97" user_visible="false"/>
-  <apn carrier="Cityfone IMS" carrier_id="2057" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="spn" mvno_match_data="CITYFONE" user_visible="false"/>
+  <apn carrier="Tbaytel SOS" carrier_id="2090" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="BA" user_visible="false"/>
+  <apn carrier="Tbaytel SOS" carrier_id="2090" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x92" user_visible="false"/>
 
   <!--
     Rogers - Chatr (https://www.chatrwireless.com/) - 302720 gid=D2 OR 302720 imsi=302720x84/302720x83/302720x94
-    - similar to Rogers
+    - based on google APNs
+    - similar to Rogers, but emergency APN is different
   -->
-  <apn carrier="Chatr" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV4V6" mvno_type="gid" mvno_match_data="D2"/>
-  <apn carrier="Chatr" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x83"/>
-  <apn carrier="Chatr" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x84"/>
-  <apn carrier="Chatr" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x94"/>
-  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV4V6" mvno_type="gid" mvno_match_data="D2"/>
-  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x83"/>
-  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x84"/>
-  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x94"/>
-  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="D2" user_visible="false"/>
-  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x83" user_visible="false"/>
-  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x84" user_visible="false"/>
-  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x94" user_visible="false"/>
+  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="D2"/>
+  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x83"/>
+  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x84"/>
+  <apn carrier="Chatr Internet" carrier_id="2055" mcc="302" mnc="720" apn="chatrweb.apn" mmsc="http://mms.chatrwireless.com" mmsproxy="mmsproxy.chatrwireless.com" mmsport="80" type="default,mms,supl" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x94"/>
+  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="D2"/>
+  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x83"/>
+  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x84"/>
+  <apn carrier="Chatr Tethering" carrier_id="2055" mcc="302" mnc="720" apn="chatrisp.apn" type="dun" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x94"/>
+  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="gid" mvno_match_data="D2" user_visible="false"/>
+  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x83" user_visible="false"/>
+  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x84" user_visible="false"/>
+  <apn carrier="Chatr IMS" carrier_id="2055" mcc="302" mnc="720" apn="ims" type="ims" protocol="IPV6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|9|10|11|13|14|15|18|20" mvno_type="imsi" mvno_match_data="302720x94" user_visible="false"/>
   <apn carrier="Chatr XCAP" carrier_id="2055" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="gid" mvno_match_data="D2" user_visible="false"/>
   <apn carrier="Chatr XCAP" carrier_id="2055" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x83" user_visible="false"/>
   <apn carrier="Chatr XCAP" carrier_id="2055" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x84" user_visible="false"/>
   <apn carrier="Chatr XCAP" carrier_id="2055" mcc="302" mnc="720" apn="netsvcs" type="xcap" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20" mvno_type="imsi" mvno_match_data="302720x94" user_visible="false"/>
+  <apn carrier="Chatr SOS" carrier_id="2055" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="gid" mvno_match_data="D2" user_visible="false"/>
+  <apn carrier="Chatr SOS" carrier_id="2055" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x83" user_visible="false"/>
+  <apn carrier="Chatr SOS" carrier_id="2055" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x84" user_visible="false"/>
+  <apn carrier="Chatr SOS" carrier_id="2055" mcc="302" mnc="720" apn="EMERGENCY" type="emergency" protocol="IPV6" roaming_protocol="IPV4V6" mvno_type="imsi" mvno_match_data="302720x94" user_visible="false"/>
 
   <!--
     Rogers - Ztar - 302720 gid=D4 OR 302720 imsi=302720x98
@@ -474,5 +474,5 @@
     - based on google APNs
     - renamed
   -->
-  <apn carrier="Rogers WPN" mcc="302" mnc="721" apn="rogerswpn.apn" type="default,supl,dun" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
+  <apn carrier="Rogers Internet WPN" mcc="302" mnc="721" apn="rogerswpn.apn" type="default,supl,dun" protocol="IPV4V6" roaming_protocol="IPV4V6"/>
 </apns>
