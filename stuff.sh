@@ -46,6 +46,15 @@ done
 python3 lineage/scripts/carriersettings-extractor/carriersettings_extractor.py -i blazer_BP4A.260205.001/CarrierSettings -a out/2026 -v out/2026
 xmllint --format out/2026/apns-conf.xml --output out/2026/apns-conf.xml
 
+mkdir out/2026-04
+bsdtar xOf stallion_CP1A.260405.005/TelephonyProvider.apk assets/carrier_list.pb | protoscope -descriptor-set android16-qpr2-release/carrierId.proto.pb -message-type carrierIdentification.CarrierList -print-field-names -print-enum-names > out/2026-04/carrierId.txt
+protoscope -descriptor-set android16-qpr2-release/carrier_list.proto.pb -message-type com.google.carrier.CarrierList -print-field-names -print-enum-names < stallion_CP1A.260405.005/CarrierSettings/carrier_list.pb > out/2026-04/carrier_list.txt
+for x in freedommobile bell telus shaw rogers videotron fizz; do
+protoscope -descriptor-set android16-qpr2-release/carrier_settings.proto.pb -message-type com.google.carrier.CarrierSettings -print-field-names -print-enum-names < stallion_CP1A.260405.005/CarrierSettings/${x}_ca.pb > out/2026-04/carrier_settings_$x.txt
+done
+python3 lineage/scripts/carriersettings-extractor/carriersettings_extractor.py -i stallion_CP1A.260405.005/CarrierSettings -a out/2026-04 -v out/2026-04
+xmllint --format out/2026-04/apns-conf.xml --output out/2026-04/apns-conf.xml
+
 exit
 
 ### to install and apply new apns config without rebuilding lineage:
